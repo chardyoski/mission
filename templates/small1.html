@@ -1,14 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
-		<script src="../js/jquery-1.12.3.js"></script>
-		<script src="../js/xiangqing.js"></script>
-		<script src="../js/jquery.cookie.js"></script>
-		<script src="../js/small.js"></script>
+		<link rel="stylesheet" type="text/css" href="{% static 'small1/css/reset.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'small1/css/common.css' %}"/>
+		<script src="{% static 'small1/js/jquery-1.12.3.js' %}"></script>
+		<script src="{% static 'small1/js/xiangqing.js' %}"></script>
+		<script src="{% static 'small1/js/jquery.cookie.js' %}"></script>
+		<script src="{% static 'small1/js/small.js' %}"></script>
+{#        <script src="{% static 'small1/js/test.js' %}"></script>#}
 		
 	</head>
 	<body>
@@ -23,30 +25,30 @@
 						<span>您好，欢迎光临文轩网！</span>
 					</li>
 					<li class="login">
-						<a href="#" target="_blank" class="col">【登录】</a>	
-						<a href="#" target="_blank" class="col">【免费注册】</a>	
+						<a href="#" target="_blank" class="col">【登录】</a>
+						<a href="#" target="_blank" class="col">【免费注册】</a>
 					</li>
 					<li class="list1">
-						<a href="#"target="_blank">我的订单</a>
-						
+						<a href="#" target="_blank">我的订单</a>
+
 					</li>
 					<li class="list2">
-						<a href="#"target="_blank">礼品卡</a>
+						<a href="#" target="_blank">礼品卡</a>
 					</li>
 					<li class="list3">
-						<a href="#"target="_blank">新手上门</a>
+						<a href="#" target="_blank">新手上门</a>
 						<i></i>
 						<div class="mune1">
 							<ul class="tip1">
 								<li><a href="#" target="_blank">购物保障</a></li>
 								<li><a href="#" target="_blank">购物流程</a></li>
 								<li><a href="#" target="_blank">常见问题</a></li>
-								
+
 							</ul>
 						</div>
 					</li>
 					<li class="list4">
-						<a href="#"target="_blank">帮助中心</a>
+						<a href="#" target="_blank">帮助中心</a>
 						<i></i>
 						<div class="mune2">
 							<ul class="tip2">
@@ -59,33 +61,33 @@
 						</div>
 					</li>
 					<li class="list5">
-						<a href="#"target="_blank">客户服务</a>
+						<a href="#" target="_blank">客户服务</a>
 						<i></i>
 						<div class="mune3">
 							<ul class="tip3">
 								<li><a href="#" target="_blank">客服中心</a></li>
 								<li><a href="#" target="_blank">售后服务</a></li>
-							
+
 							</ul>
 						</div>
 					</li>
 					<li class="list6">
 						<b></b>
-						<a href="#"target="_blank">手机文轩</a>
+						<a href="#" target="_blank">手机文轩</a>
 						<i></i>
-						
+
 						<div class="mune4">
 							<div class="ipone">
-								<img src="../images/m143.jpg" />
-								<a href="#" target="_blank"><span>扫一扫 文轩手机购物></span></a>
+								<img src="{%static 'small1/images/m143.jpg'%}">
+								<a href="#" target="_blank"><span>扫一扫 文轩手机购物&gt;</span></a>
 							</div>
 							<div class="code">
-								<img src="../images/code2.png" />
-								<a href="#" target="_blank"><span>电子书 客户端></span></a>
+								<img src="{%static 'small1/images/code2.png'%}">
+								<a href="#" target="_blank"><span>电子书 客户端&gt;</span></a>
 							</div>
 						</div>
 					</li>
-				</ul>			
+				</ul>
 			</div>
 		</div>
 		<!--
@@ -93,35 +95,35 @@
         -->
 		<div id="pic">
 			<a href="#" title="乐享暑假">
-				
+
 			</a>
 		</div>
-		
+
 		<!--
         	pic end
         -->
-		
+
 		<div id="search-wrapper">
 			<div class="search inner">
 				<div class="logo">
 					<a href="#">
-						<img src="../images/logo.png" />
+						<img src="{%static 'small1/images/logo.png'%}">
 					</a>
 				</div>
 				<div class="ediot">
 					<form method="" action="" name="">
-						<input type="text" placeholder="未来简史" class="tet"/>
-						<input type="submit" value="搜索" class="sub"/>
+						<input type="text" placeholder="未来简史" class="tet">
+						<input type="submit" value="搜索" class="sub">
 						<a href="#" target="_blank">高级搜索</a>
 					</form>
 					<div class="keyword">
 						<span>热门搜索:</span>
-						<a href="#" target="_blank">今日秒杀<img src="../images/hot-045.gif"/></a>
-						<a href="#" target="_blank">5折封顶<img src="../images/hot-045.gif"/></a>
-						<a href="#" target="_blank">满59减15<img src="../images/hot-045.gif"/></a>
-						<a href="#" target="_blank">双峰<img src="../images/hot-045.gif"/></a>
-						<a href="#" target="_blank">收藏家<img src="../images/hot-045.gif"/></a>
-						<a href="#" target="_blank">美国众神<img src="../images/hot-045.gif"/></a>
+						<a href="#" target="_blank">今日秒杀<img src="{%static 'small1/images/hot-045.gif'%}"></a>
+						<a href="#" target="_blank">5折封顶<img src="{%static 'small1/images/hot-045.gif'%}"></a>
+						<a href="#" target="_blank">满59减15<img src="{%static 'small1/images/hot-045.gif'%}"></a>
+						<a href="#" target="_blank">双峰<img src="{%static 'small1/images/hot-045.gif'%}"></a>
+						<a href="#" target="_blank">收藏家<img src="{%static 'small1/images/hot-045.gif'%}"></a>
+						<a href="#" target="_blank">美国众神<img src="{%static 'small1/images/hot-045.gif'%}"></a>
 					</div>
 				</div>
 				<div class="buycar">
@@ -139,13 +141,13 @@
 						<a href="#" target="_blank">购物车</a>
 						<i></i>
 					</div>
-					
+
 				</div>
 			</div>
-			
+
 		</div>
 		<!--search结束 -->
-		
+
 		<!--nav -->
 		<div id="nav-wrapper">
 			<div class="nav inner">
@@ -164,12 +166,12 @@
 				</ul>
 			</div>
 		</div>
-	
+
 		<div id="bookshop-warpper">
 			<div class="book-shop inner">
 				<div class="bk-top">
-					<a href="#" target="_blank" style="font-size: 18px;font-family: 'microsoft yahei';font-weight: 700;line-height: 20px;">图书</a>>
-					<a href="#" target="_blank">励志与成功</a>>
+					<a href="#" target="_blank" style="font-size: 18px;font-family: 'microsoft yahei';font-weight: 700;line-height: 20px;">图书</a>&gt;
+					<a href="#" target="_blank">励志与成功</a>&gt;
 					<a href="#" target="_blank">成功学</a>
 				</div>
 				<div class="shop-left">
@@ -179,77 +181,77 @@
 					<ul class="bbk">
 						<li>
 							<a href="#" target="_blank">
-								<img src="../images/tl1.jpg" />
+								<img src="{%static 'small1/images/tl1.jpg'%}">
 								<strong>向着光亮那方:谁的青春不迷茫系列/刘同作品 </strong>
 							</a>
 								<div class="pires">
 									文轩价：<span>¥27.30</span>
 								</div>
-							
+
 						</li>
 						<li>
 							<a href="#" target="_blank">
-								<img src="../images/tl2.jpg" />
+								<img src="{%static 'small1/images/tl2.jpg'%}">
 								<strong>向着光亮那方:谁的青春不迷茫系列/刘同作品 </strong>
 							</a>
 								<div class="pires">
 									文轩价：<span>¥27.30</span>
 								</div>
-							
+
 						</li>
 						<li>
 							<a href="#" target="_blank">
-								<img src="../images/tl3.jpg" />
+								<img src="{%static 'small1/images/tl3.jpg'%}">
 								<strong>向着光亮那方:谁的青春不迷茫系列/刘同作品 </strong>
 							</a>
 								<div class="pires">
 									文轩价：<span>¥27.30</span>
 								</div>
-							
+
 						</li>
 						<li>
 							<a href="#" target="_blank">
-								<img src="../images/tl4.jpg" />
+								<img src="{%static 'small1/images/tl4.jpg'%}">
 								<strong>向着光亮那方:谁的青春不迷茫系列/刘同作品 </strong>
 							</a>
 								<div class="pires">
 									文轩价：<span>¥27.30</span>
 								</div>
-							
+
 						</li>
 						<li>
 							<a href="#" target="_blank">
-								<img src="../images/tl5.jpg" />
+								<img src="{%static 'small1/images/tl5.jpg'%}">
 								<strong>向着光亮那方:谁的青春不迷茫系列/刘同作品 </strong>
 									</a>
 								<div class="pires">
 									文轩价：<span>¥27.30</span>
 								</div>
-						
+
 						</li>
 						<li>
 							<a href="#" target="_blank">
-								<img src="../images/tl6.jpg" />
+								<img src="{%static 'small1/images/tl6.jpg'%}">
 								<strong>向着光亮那方:谁的青春不迷茫系列/刘同作品 </strong>
 								</a>
 								<div class="pires">
 									文轩价：<span>¥27.30</span>
 								</div>
-							
+
 						</li>
 					</ul>
 					<div class="more-bk">
-						<a href="#" target="_blank">更多>></a>
+						<a href="#" target="_blank">更多&gt;&gt;</a>
 					</div>
 				</div>
 				<!-- 购物车-->
 				<div class="bk-by">
 					<div class="small-img">
 						<div id="smallImg">
-							<img src="../images/small1.jpg" />
-							<div id="smallArea"></div>
+							<img src="{%static 'small1/images/small1.jpg'%}">
+							<div id="smallArea" style="width: 233.333px; height: 233.333px;"></div>
 						</div>
-						
+
 						<div class="sml_coin">
 							<span>分享到：</span>
 							<a href="#" target="_blank">
@@ -270,12 +272,12 @@
 							</a>
 						</div>
 					</div>
-					
+
 					<!--右边 -->
-					
+
 					<div class="rig-tilk">
-						<div id="bigArea">
-							<img src="../images/big1.jpg" id="bigImg"/>
+						<div id="bigArea" style="">
+							<img src="{%static 'small1/images/big1.jpg'%}" id="bigImg">
 						</div>
 						<div class="rit_title">
 							<h1>谁的青春不迷茫</h1>
@@ -294,7 +296,7 @@
 							</div>
 							<div class="peisong">
 								<span>配 送 至 ：</span>
-								<b>中国四川省成都市<i></i></b>								
+								<b>中国四川省成都市<i></i></b>
 								<em>现在有货</em>
 							</div>
 							<div class="psxq">
@@ -303,12 +305,12 @@
 							</div>
 							<div class="aticle">
 								<span>作　　者 ：</span>
-								<a href="#"target="_blank">刘同</a>&nbsp;著
+								<a href="#" target="_blank">刘同</a>&nbsp;著
 							</div>
 							<div class="fenk">
 								<span>所属分类 ：</span>
-								<a href="#" target="_blank">图书</a>>
-								<a href="#" target="_blank">励志与成功</a>>
+								<a href="#" target="_blank">图书</a>&gt;
+								<a href="#" target="_blank">励志与成功</a>&gt;
 								<a href="#" target="_blank">成功学</a>
 							</div>
 						</div>
@@ -318,16 +320,16 @@
 								<span>购买数量 ：</span>
 								<b class="much-more">
 									<a class="reduce-btn">-</a>
-									<input type="text" value="1" class="buy-much" />
+									<input type="text" value="1" class="buy-much">
 									<a class="add-btn">+</a>
 								</b>件
 							</div>
-							
+
 								<div id="cart">
-									<a target="_blank"  style="cursor: pointer;" href="gouwuche.html"></a> 
+									<a target="_blank" style="cursor: pointer;" href="gouwuche.html"></a>
 								</div>
-							
-							
+
+
 							<div class="buy-servce">
 								<div class="service1">
 								<span>服　　务 ：</span>
@@ -341,7 +343,7 @@
 								</div>
 							</div>
 						</div>
-					</div> 
+					</div>
 					<!--购物显示界面 -->
 					<div class="suc-wrp">
 						<div class="suc">
@@ -355,18 +357,18 @@
 							</div>
 							<div class="suc-btn">
 								<button id="cart" style="border-radius:5px ;"><a href="gouwuche.html" target="_blank" class="addToCart">去购物车并结算 </a> </button>
-								<button class="buy-min">继续购物></button>
-								
+								<button class="buy-min">继续购物&gt;</button>
+
 							</div>
 						</div>
 					</div>
-					
-					
+
+
 				</div>
 			</div>
 		</div>
-	
-	
+
+
 			<!--
             	尾部
             -->
@@ -402,7 +404,7 @@
 							<dd><a href="#" target="_blank">退换货规则</a></dd>
 							<dd><a href="#" target="_blank">如何申请售后服务</a></dd>
 							<dd><a href="#" target="_blank">退款及提现</a></dd>
-							
+
 						</li>
 						<li class="service-list">
 							<dt>我的订单</dt>
@@ -429,7 +431,7 @@
 					</ul>
 				</div>
 				<div class="foot-two">
-					
+
 				</div>
 				<div class="foot-thr">
 					<div class="foot-nav">
@@ -438,17 +440,18 @@
 						<a href="#" target="_blank">加入文轩</a> |
 						<a href="#" target="_blank">合作伙伴</a>
 					</div>
-					<br />
-					<a href="#" target="_blank"style="display: inline-block;height: 20px;line-height: 20px;text-decoration: none;"><img src="../images/gawj.png" /> 川公网安备 51010602000457号</a> | 增值电信业务经营许可证：川B2-20100040 |
+					<br>
+					<a href="#" target="_blank" style="display: inline-block;height: 20px;line-height: 20px;text-decoration: none;"><img src="{%static 'small1/images/gawj.png'%}"> 川公网安备 51010602000457号</a> | 增值电信业务经营许可证：川B2-20100040 |
 					<a href="#" target="_blank">出版物经营许可证</a> | 蜀ICP备11014037号
-					<br /><br />
-					Copyright(C) 
+					<br><br>
+					Copyright(C)
 					<a href="#" target="_blank">文轩网</a> 2000-2017 版权所有 | 客服热线：400-702-0808 　
-					<br />
-					<img src="../images/scgswjlogo.png" />
+					<br>
+					<img src="{%static 'small1/images/scgswjlogo.png'%}">
 				</div>
 			</div>
 		</div>
+
 	
 	</body>
 </html>

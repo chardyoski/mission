@@ -1,17 +1,24 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/style.css"/>
-		<script src="../js/jquery-1.12.3.js"></script>
-		<script src="../js/move.js"></script>
-		<script src="../js/style.js"></script>
-		<script src="../js/jquery.cookie.js"></script>
-		<script src="../js/cookie.js"></script>
-		<script src="../js/wenxuanjuji.js"></script>
+		<link rel="stylesheet" type="text/css" href="{%static 'index/css/reset.css'%}"/>
+		<link rel="stylesheet" type="text/css" href="{%static 'index/css/common.css'%}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'index/css/style.css'%}"/>
+		<script src="{% static 'index/js/jquery-1.12.3.js'%}"></script>
+		<script src="{% static 'index/js/move.js'%}"></script>
+		<script src="{% static 'index/js/style.js'%}"></script>
+		<script src="{% static 'index/js/jquery.cookie.js'%}"></script>
+		<script src="{% static 'index/js/cookie.js'%}"></script>
+		<script src="{% static 'index/js/wenxuanjuji.js' %}"></script>
+{#        <link rel="stylesheet" href="{% static 'index/css/swiper.min.css' %}">#}
+{#		<script src="{% static 'index/js/test.js' %}">#}
+         <!-- Swiper JS -->
+{#        <script src="{% static 'index/js/swiper.min.js'%}"></script>#}
+
+
 		<script>
 			onload = function(){
 				
@@ -31,8 +38,9 @@
 				 
 			}
 		</script>
+
 	</head>
-	<body>`
+	<body>
 		<div id="header-wrapper">
 			<div class="header inner">
 				<div class="he_l">
@@ -44,30 +52,30 @@
 						<span>您好，欢迎光临文轩网！</span>
 					</li>
 					<li class="login">
-						<a href="denglu.html" target="_blank" id="col"></a>	
-						<a href="zhuce.html" target="_blank" id="kiu">【免费注册】</a>	
+						<a href="denglu.html" target="_blank" id="col"></a>
+						<a href="zhuce.html" target="_blank" id="kiu">【免费注册】</a>
 					</li>
 					<li class="list1">
-						<a href="#"target="_blank">我的订单</a>
-						
+						<a href="#" target="_blank">我的订单</a>
+
 					</li>
 					<li class="list2">
-						<a href="#"target="_blank">礼品卡</a>
+						<a href="#" target="_blank">礼品卡</a>
 					</li>
 					<li class="list3">
-						<a href="#"target="_blank">新手上门</a>
+						<a href="#" target="_blank">新手上门</a>
 						<i></i>
 						<div class="mune1">
 							<ul class="tip1">
 								<li><a href="#" target="_blank">购物保障</a></li>
 								<li><a href="#" target="_blank">购物流程</a></li>
 								<li><a href="#" target="_blank">常见问题</a></li>
-								
+
 							</ul>
 						</div>
 					</li>
 					<li class="list4">
-						<a href="#"target="_blank">帮助中心</a>
+						<a href="#" target="_blank">帮助中心</a>
 						<i></i>
 						<div class="mune2">
 							<ul class="tip2">
@@ -80,34 +88,34 @@
 						</div>
 					</li>
 					<li class="list5">
-						<a href="#"target="_blank">客户服务</a>
+						<a href="#" target="_blank">客户服务</a>
 						<i></i>
 						<div class="mune3">
 							<ul class="tip3">
 								<li><a href="#" target="_blank">客服中心</a></li>
 								<li><a href="#" target="_blank">售后服务</a></li>
-								
-								
+
+
 							</ul>
 						</div>
 					</li>
 					<li class="list6">
 						<b></b>
-						<a href="#"target="_blank">手机文轩</a>
+						<a href="#" target="_blank">手机文轩</a>
 						<i></i>
-						
+
 						<div class="mune4">
 							<div class="ipone">
-								<img src="../images/m143.jpg" />
-								<a href="#" target="_blank"><span>扫一扫 文轩手机购物></span></a>
+								<img src="{%static 'index/images/m143.jpg'%}">
+								<a href="#" target="_blank"><span>扫一扫 文轩手机购物&gt;</span></a>
 							</div>
 							<div class="code">
-								<img src="../images/code2.png" />
-								<a href="#" target="_blank"><span>电子书 客户端></span></a>
+								<img src="{%static 'index/images/code2.png'%}">
+								<a href="#" target="_blank"><span>电子书 客户端&gt;</span></a>
 							</div>
 						</div>
 					</li>
-				</ul>			
+				</ul>
 			</div>
 		</div>
 		<!--
@@ -115,35 +123,35 @@
         -->
 		<div id="pic">
 			<a href="#" title="乐享暑假">
-				
+
 			</a>
 		</div>
-		
+
 		<!--
         	pic end
         -->
-		
+
 		<div id="search-wrapper">
 			<div class="search inner">
 				<div class="logo">
 					<a href="#">
-						<img src="../images/logo.png" />
+						<img src="{%static 'index/images/logo.png'%}" alt="">
 					</a>
 				</div>
 				<div class="ediot">
 					<form method="" action="" name="">
-						<input type="text" placeholder="未来简史" class="tet"/>
-						<input type="submit" value="搜索" class="sub"/>
+						<input type="text" placeholder="未来简史" class="tet">
+						<input type="submit" value="搜索" class="sub">
 						<a href="#" target="_blank">高级搜索</a>
 					</form>
 					<div class="keyword">
 						<span>热门搜索:</span>
-						<a href="#" target="_blank">今日秒杀<img src="../images/hot-045.gif"/></a>
-						<a href="#" target="_blank">5折封顶<img src="../images/hot-045.gif"/></a>
-						<a href="#" target="_blank">满59减15<img src="../images/hot-045.gif"/></a>
-						<a href="#" target="_blank">双峰<img src="../images/hot-045.gif"/></a>
-						<a href="#" target="_blank">收藏家<img src="../images/hot-045.gif"/></a>
-						<a href="#" target="_blank">美国众神<img src="../images/hot-045.gif"/></a>
+						<a href="#" target="_blank">今日秒杀<img src="{%static 'index/images/hot-045.gif'%}"></a>
+						<a href="#" target="_blank">5折封顶<img src="{%static 'index/images/hot-045.gif'%}"></a>
+						<a href="#" target="_blank">满59减15<img src="{%static 'index/images/hot-045.gif'%}"></a>
+						<a href="#" target="_blank">双峰<img src="{%static 'index/images/hot-045.gif'%}"></a>
+						<a href="#" target="_blank">收藏家<img src="{%static 'index/images/hot-045.gif'%}"></a>
+						<a href="#" target="_blank">美国众神<img src="{%static 'index/images/hot-045.gif'%}"></a>
 					</div>
 				</div>
 				<div class="buycar">
@@ -161,13 +169,13 @@
 						<a href="gouwuche.html" target="_blank">购物车</a>
 						<i></i>
 					</div>
-					
+
 				</div>
 			</div>
-			
+
 		</div>
 		<!--search结束 -->
-		
+
 		<!--nav -->
 		<div id="nav-wrapper">
 			<div class="nav inner">
@@ -186,39 +194,44 @@
 				</ul>
 			</div>
 		</div>
-	
+
 		<!--banner -->
-		<div id="banner-wrapper">
+		<div id="banner-wrapper" >
 		<div id="box">
-			
-			<ul id="list1">
-				<!--<li></li>
-				<li> </li>
-				<li></li>
-				<li> </li>
-				<li></li>-->
-						
-			</ul>
-			<ul id="list2">
-				<!--<li class="active"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>-->
-				
-			</ul>
-			
-			
-		</div>
-	</div>
+
+
+
+            <ul id="list1" >
+            <li><img src="{% static 'index/images/banner1.jpg' %}" alt="" ></li>
+            <li><img src="{% static 'index/images/banner2.jpg' %}" alt="" ></li>
+            <li><img src="{% static 'index/images/banner3.jpg' %}" alt="" ></li>
+            <li><img src="{% static 'index/images/banner4.jpg' %}" alt="" ></li>
+            <li><img src="{% static 'index/images/banner5.jpg' %}" alt="" ></li>
+           </ul>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		<!--themes -->
 		<div id="themes-wrapper">
 			<div class="themes inner">
 				<div class="columns">
 					<dl class="product1">
 						<dt>
-							<span style="color: #f00;font-weight: bold;font-size: 12px;">品类专业馆<img src="../images/hot-045.gif" /></span>
-							
+							<span style="color: #f00;font-weight: bold;font-size: 12px;">品类专业馆<img src="{%static 'index/images/hot-045.gif'%}"></span>
+
 						</dt>
 						<dd>
 							<a href="#" target="_blank">新书频道</a><b></b>
@@ -250,10 +263,10 @@
 						<dd>
 							<a href="#" target="_blank" style="color: #f00;font-weight: bold;">考试专区</a>
 						</dd>
-						
+
 					</dl>
 					<dl class="product2">
-						<dt><a href="#" target="_blank" >少儿</a></dt>
+						<dt><a href="#" target="_blank">少儿</a></dt>
 						<dd>
 							<a href="#" target="_blank">0-2岁</a><b></b>
 						</dd>
@@ -262,7 +275,7 @@
 						</dd>
 						<dd>
 							<a href="#" target="_blank">7-10岁</a>
-						</dd><br />
+						</dd><br>
 						<dd>
 							<a href="#" target="_blank">11-14岁</a><b></b>
 						</dd>
@@ -286,7 +299,7 @@
 						</dd>
 					</dl>
 					<dl class="product3">
-						<dt><a href="#" target="_blank" >文学小说</a></dt>
+						<dt><a href="#" target="_blank">文学小说</a></dt>
 						<dd>
 							<a href="#" target="_blank">现当代小说</a><b></b>
 						</dd>
@@ -301,7 +314,7 @@
 						</dd>
 					</dl>
 					<dl class="product3">
-						<dt><a href="#" target="_blank" >学习与考试</a></dt>
+						<dt><a href="#" target="_blank">学习与考试</a></dt>
 						<dd>
 							<a href="#" target="_blank">教学与教辅</a><b></b>
 						</dd>
@@ -316,7 +329,7 @@
 						</dd>
 					</dl>
 					<dl class="product4">
-						<dt><a href="#" target="_blank" >经济管理</a></dt>
+						<dt><a href="#" target="_blank">经济管理</a></dt>
 						<dd>
 							<a href="#" target="_blank">管理学</a><b></b>
 						</dd>
@@ -324,13 +337,13 @@
 							<a href="#" target="_blank">经济与金融</a><b></b>
 						</dd>
 						<dd>
-							<a href="#" target="_blank">投资理财</a>							
+							<a href="#" target="_blank">投资理财</a>
 						</dd>
-						
-						
+
+
 					</dl>
 					<dl class="product3">
-						<dt><a href="#" target="_blank" >励志与成功</a></dt>
+						<dt><a href="#" target="_blank">励志与成功</a></dt>
 						<dd>
 							<a href="#" target="_blank">成功学</a><b></b>
 						</dd>
@@ -338,7 +351,7 @@
 							<a href="#" target="_blank">心理学</a><b></b>
 						</dd>
 						<dd>
-							<a href="#" target="_blank">心灵鸡汤</a>							
+							<a href="#" target="_blank">心灵鸡汤</a>
 						</dd>
 						<dd>
 							<a href="#" target="_blank">情商情绪</a><b></b>
@@ -347,11 +360,11 @@
 							<a href="#" target="_blank">女性励志</a><b></b>
 						</dd>
 						<dd>
-							<a href="#" target="_blank">心灵读物</a>							
+							<a href="#" target="_blank">心灵读物</a>
 						</dd>
 					</dl>
 					<dl class="product4">
-						<dt><a href="#" target="_blank" >童书</a></dt>
+						<dt><a href="#" target="_blank">童书</a></dt>
 						<dd>
 							<a href="#" target="_blank">儿童文化</a><b></b>
 						</dd>
@@ -359,36 +372,36 @@
 							<a href="#" target="_blank">童话故事</a><b></b>
 						</dd>
 						<dd>
-							<a href="#" target="_blank">必读名著</a>							
+							<a href="#" target="_blank">必读名著</a>
 						</dd>
 					</dl>
 					<dl class="product3">
-						<dt><a href="#" target="_blank" >生活</a></dt>
+						<dt><a href="#" target="_blank">生活</a></dt>
 						<dd>
 							<a href="#" target="_blank">家庭与育儿</a><b></b>
 						</dd>
 						<dd>
 							<a href="#" target="_blank">运动健身</a>
 						</dd>
-						<br />
+						<br>
 						<dd>
-							<a href="#" target="_blank">烹饪与美食</a><b></b>							
+							<a href="#" target="_blank">烹饪与美食</a><b></b>
 						</dd>
 						<dd>
 							<a href="#" target="_blank">时尚美容</a>
 						</dd>
 					</dl>
 					<dl class="product3">
-						<dt><a href="#" target="_blank" >科技</a></dt>
+						<dt><a href="#" target="_blank">科技</a></dt>
 						<dd>
 							<a href="#" target="_blank">计算机与网络</a><b></b>
 						</dd>
 						<dd>
 							<a href="#" target="_blank">科普读物</a>
 						</dd>
-						<br />
+						<br>
 						<dd>
-							<a href="#" target="_blank">工业技术</a><b></b>							
+							<a href="#" target="_blank">工业技术</a><b></b>
 						</dd>
 						<dd>
 							<a href="#" target="_blank">医学</a><b></b>
@@ -398,16 +411,16 @@
 						</dd>
 					</dl>
 					<dl class="product3">
-						<dt><a href="#" target="_blank" >艺术与摄影</a></dt>
+						<dt><a href="#" target="_blank">艺术与摄影</a></dt>
 						<dd>
 							<a href="#" target="_blank">摄影</a><b></b>
 						</dd>
 						<dd>
 							<a href="#" target="_blank">绘画</a><b></b>
 						</dd>
-						
+
 						<dd>
-							<a href="#" target="_blank">书法与字帖</a>							
+							<a href="#" target="_blank">书法与字帖</a>
 						</dd>
 						<dd>
 							<a href="#" target="_blank">鉴赏收藏</a><b></b>
@@ -417,7 +430,7 @@
 						</dd>
 					</dl>
 					<dl class="product4">
-						<dt><a href="#" target="_blank" >人文社区</a></dt>
+						<dt><a href="#" target="_blank">人文社区</a></dt>
 						<dd>
 							<a href="#" target="_blank">哲学与宗教</a><b></b>
 						</dd>
@@ -425,7 +438,7 @@
 							<a href="#" target="_blank">历史</a><b></b>
 						</dd>
 						<dd>
-							<a href="#" target="_blank">政治</a>							
+							<a href="#" target="_blank">政治</a>
 						</dd>
 					</dl>
 					<dl class="product5">
@@ -437,10 +450,10 @@
 						<a href="#" target="_blank">电子书</a>
 					</dl>
 					<dt class="other">
-						<a href="#" target="_blank">全部商品分类>></a>
+						<a href="#" target="_blank">全部商品分类&gt;&gt;</a>
 					</dt>
 				</div>
-				<div class="module">					
+				<div class="module">
 					<div class="time-top">
 						<h3>
 							<i></i>
@@ -454,40 +467,40 @@
 					<div class="pop-book1">
 						<ul>
 							<li>
-								<a href="small.html" target="_blank">
-									<img src="../images/1200719594_10_1.jpg" />
+								<a href="{% url 'mymission:small' %}" target="_blank">
+									<img src="{%static 'index/images/1200719594_10_1.jpg'%}">
 									<span>超值9.9</span>
 									<strong>￥9.9</strong>
 									<i>￥28.0</i>
 								</a>
 							</li>
 							<li>
-								<a href="small.html" target="_blank">
-									<img src="../images/1201241234_10_1.jpg" />
+								<a href="{% url 'mymission:small' %}" target="_blank">
+									<img src="{%static 'index/images/1201241234_10_1.jpg'%}">
 									<span>超值9.9</span>
 									<strong>￥9.9</strong>
 									<i>￥28.0</i>
 								</a>
 							</li>
 							<li>
-								<a href="small.html" target="_blank">
-									<img src="../images/1201483158_10_1.jpg" />
+								<a href="{% url 'mymission:small1' %}" target="_blank">
+									<img src="{%static 'index/images/1201483158_10_1.jpg'%}">
 									<span>超值9.9</span>
 									<strong>￥9.9</strong>
 									<i>￥28.0</i>
 								</a>
 							</li>
 							<li>
-								<a href="small.html" target="_blank">
-									<img src="../images/1201485493_10_1.jpg" />
+								<a href="{% url 'mymission:small1' %}" target="_blank">
+									<img src="{%static 'index/images/1201485493_10_1.jpg'%}">
 									<span>超值9.9</span>
 									<strong>￥9.9</strong>
 									<i>￥28.0</i>
 								</a>
 							</li>
 							<li>
-								<a href="small.html" target="_blank">
-									<img src="../images/1201512906_10_1.jpg" />
+								<a href="{% url 'mymission:small1' %}" target="_blank">
+									<img src="{%static 'index/images/1201512906_10_1.jpg'%}">
 									<span>超值9.9</span>
 									<strong>￥9.9</strong>
 									<i>￥28.0</i>
@@ -495,14 +508,14 @@
 							</li>
 						</ul>
 					</div>
-					
+
 					<div class="title_top">
 						<h2>
 							<i></i>
 							<span>暑期重磅</span>
 							<strong>50万图书66减10，100减20，大陆地区包邮！</strong>
 						</h2>
-						
+
 					</div>
 					<div class="pop-book2">
 						<ul>
@@ -510,57 +523,57 @@
 								<a href="small.html" target="_blank">
 									<span>超值9.9</span>
 									<b>好书不贵</b>
-									<img src="../images/bk-1.jpg" title="超值9.9" />
+									<img src="{%static 'index/images/bk-1.jpg'%}" title="超值9.9">
 								</a>
 							</li>
 							<li>
 								<a href="small1.html" target="_blank">
 									<span>超值9.9</span>
 									<b>好书不贵</b>
-									<img src="../images/bk-2.jpg" title="超值9.9" />
+									<img src="{%static 'index/images/bk-2.jpg'%}" title="超值9.9">
 								</a>
 							</li>
 							<li>
 								<a href="small.html" target="_blank">
 									<span>超值9.9</span>
 									<b>好书不贵</b>
-									<img src="../images/bk-3.jpg" title="超值9.9"/>
+									<img src="{%static 'index/images/bk-3.jpg'%}" title="超值9.9">
 								</a>
 							</li>
 							<li>
 								<a href="small.html" target="_blank">
 									<span>超值9.9</span>
 									<b>好书不贵</b>
-									<img src="../images/bk-4.jpg" title="超值9.9"/>
+									<img src="{%static 'index/images/bk-4.jpg'%}" title="超值9.9">
 								</a>
 							</li>
 							<li>
 								<a href="small.html" target="_blank">
 									<span>超值9.9</span>
 									<b>好书不贵</b>
-									<img src="../images/bk-5.jpg" title="超值9.9"/>
+									<img src="{%static 'index/images/bk-5.jpg'%}" title="超值9.9">
 								</a>
 							</li>
 						</ul>
 					</div>
-					
+
 				</div>
-				
-				
+
+
 			</div>
 		</div>
-		<!--文轩聚集 --> 
+		<!--文轩聚集 -->
 		<div id="hot-wrapper">
 			<div class="hot inner">
 				<div class="hony1">
-					<img src="../images/cover_03.jpg" />
+					<img src="{%static 'index/images/cover_03.jpg'%}">
 					<span class="mony1">文轩聚集</span>
 					<b class="tiper1">倾情推荐时下最热门图书,这里做了跳转界面</b>
 				</div>
 				<ul class="pic-pop1">
 					<li>
-						<a href="small.html?id=" +id target="_blank" >
-							<img src="../images/ss1.jpg" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说"/>
+						<a href="small.html?id=" +id="" target="_blank">
+							<img src="{%static 'index/images/ss1.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">
 							<span>双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船 多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说</span>
 							<b>￥188.0</b>
 							<i>￥198.0</i>
@@ -570,8 +583,8 @@
 						</div>
 					</li>
 					<li>
-						<a href="small.html?id=" +id target="_blank" >
-							<img src="../images/ss2.jpg" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说"/>
+						<a href="small.html?id=" +id="" target="_blank">
+							<img src="{%static 'index/images/ss2.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">
 							<span>双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船 多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说</span>
 							<b>￥188.0</b>
 							<i>￥198.0</i>
@@ -581,8 +594,8 @@
 						</div>
 					</li>
 					<li>
-						<a href="small.html?id=" +id target="_blank" >
-							<img src="../images/ss3.jpg" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说"/>
+						<a href="small.html?id=" +id="" target="_blank">
+							<img src="{%static 'index/images/ss3.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">
 							<span>双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船 多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说</span>
 							<b>￥188.0</b>
 							<i>￥198.0</i>
@@ -592,8 +605,8 @@
 						</div>
 					</li>
 					<li>
-						<a href="small.html?id=" +id target="_blank" >
-							<img src="../images/ss4.jpg" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说"/>
+						<a href="small.html?id=" +id="" target="_blank">
+							<img src="{%static 'index/images/ss4.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">
 							<span>双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船 多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说</span>
 							<b>￥188.0</b>
 							<i>￥198.0</i>
@@ -603,8 +616,8 @@
 						</div>
 					</li>
 					<li>
-						<a href="small.html?id=" +id target="_blank" >
-							<img src="../images/ss5.jpg" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说"/>
+						<a href="small.html?id=" +id="" target="_blank">
+							<img src="{%static 'index/images/ss5.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">
 							<span>双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船 多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说</span>
 							<b>￥188.0</b>
 							<i>￥198.0</i>
@@ -614,8 +627,8 @@
 						</div>
 					</li>
 						<li>
-						<a href="small.html?id=" +id target="_blank" >
-							<img src="../images/ss6.jpg" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说"/>
+						<a href="small.html?id=" +id="" target="_blank">
+							<img src="{%static 'index/images/ss6.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">
 							<span>双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船 多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说</span>
 							<b>￥188.0</b>
 							<i>￥198.0</i>
@@ -625,8 +638,8 @@
 						</div>
 					</li>
 					<li>
-						<a href="small.html?id=" +id target="_blank" >
-							<img src="../images/ss7.jpg" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说"/>
+						<a href="small.html?id=" +id="" target="_blank">
+							<img src="{%static 'index/images/ss7.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">
 							<span>双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船 多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说</span>
 							<b>￥188.0</b>
 							<i>￥198.0</i>
@@ -636,8 +649,8 @@
 						</div>
 					</li>
 					<li>
-						<a href="small.html?id=" +id target="_blank" >
-							<img src="../images/ss8.jpg" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说"/>
+						<a href="small.html?id=" +id="" target="_blank">
+							<img src="{%static 'index/images/ss8.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">
 							<span>双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船 多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说</span>
 							<b>￥188.0</b>
 							<i>￥198.0</i>
@@ -647,8 +660,8 @@
 						</div>
 					</li>
 					<li>
-						<a href="small.html?id=" +id target="_blank" >
-							<img src="../images/ss9.jpg" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说"/>
+						<a href="small.html?id=" +id="" target="_blank">
+							<img src="{%static 'index/images/ss9.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">
 							<span>双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船 多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说</span>
 							<b>￥188.0</b>
 							<i>￥198.0</i>
@@ -658,8 +671,8 @@
 						</div>
 					</li>
 					<li>
-						<a href="small.html?id=" +id target="_blank" >
-							<img src="../images/ss10.jpg" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说"/>
+						<a href="small.html?id=" +id="" target="_blank">
+							<img src="{%static 'index/images/ss10.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">
 							<span>双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船 多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说</span>
 							<b>￥188.0</b>
 							<i>￥198.0</i>
@@ -669,47 +682,47 @@
 						</div>
 					</li>
 				</ul>
-			
-			</div>		
+
+			</div>
 		</div>
 		<!--特色推荐 -->
 		<div id="feature-wrapper">
 			<div class="feature inner">
 				<div class="hony2">
-					<img src="../images/cover_06.jpg" class="coin"/>
+					<img src="{%static 'index/images/cover_06.jpg'%}" class="coin">
 					<span class="mony2">特色推荐</span>
 					<ul class="title-mune">
 
 						<li>
 							<a href="#" target="_blank" class="active1">预售书</a>
-							<img src="../images/xiabiao.jpg" class="coin1"/>
+							<img src="{%static 'index/images/xiabiao.jpg'%}" class="coin1">
 						</li>
 						<li>
 							<a href="#" target="_blank">新书速递</a>
-							
+
 						</li>
 						<li>
 							<a href="#" target="_blank">精品套装</a>
-							
+
 						</li>
 						<li>
 							<a href="#" target="_blank">文轩定制</a>
-							
+
 						</li>
 						<li>
 							<a href="#" target="_blank">特价书</a>
-						
+
 						</li>
-						
+
 					</ul>
-					
+
 				</div>
 				<div class="fea_list">
 					<div class="fea_left">
 						<ul class="big_fea">
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/fea1.jpg" title="我的前半生/亦舒旧欢如梦全新增订系列"/>
+									<img src="{%static 'index/images/fea1.jpg'%}" title="我的前半生/亦舒旧欢如梦全新增订系列">
 									<span>东京一年 蒋方舟东京独居一年有声书，私人日记，日本旅游摄影，散文随笔， 陈丹青窦文涛阎连科推荐，中信 正版书</span>
 									<b>￥49.0</b>
 									<i>￥68.00</i>
@@ -717,7 +730,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/fea2.jpg" title="我的前半生/亦舒旧欢如梦全新增订系列"/>
+									<img src="{%static 'index/images/fea2.jpg'%}" title="我的前半生/亦舒旧欢如梦全新增订系列">
 									<span>东京一年 蒋方舟东京独居一年有声书，私人日记，日本旅游摄影，散文随笔， 陈丹青窦文涛阎连科推荐，中信 正版书</span>
 									<b>￥49.0</b>
 									<i>￥68.00</i>
@@ -725,7 +738,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/fea3.jpg" title="我的前半生/亦舒旧欢如梦全新增订系列"/>
+									<img src="{%static 'index/images/fea3.jpg'%}" title="我的前半生/亦舒旧欢如梦全新增订系列">
 									<span>东京一年 蒋方舟东京独居一年有声书，私人日记，日本旅游摄影，散文随笔， 陈丹青窦文涛阎连科推荐，中信 正版书</span>
 									<b>￥49.0</b>
 									<i>￥68.00</i>
@@ -733,7 +746,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/fea4.jpg" title="我的前半生/亦舒旧欢如梦全新增订系列"/>
+									<img src="{%static 'index/images/fea4.jpg'%}" title="我的前半生/亦舒旧欢如梦全新增订系列">
 									<span>东京一年 蒋方舟东京独居一年有声书，私人日记，日本旅游摄影，散文随笔， 陈丹青窦文涛阎连科推荐，中信 正版书</span>
 									<b>￥49.0</b>
 									<i>￥68.00</i>
@@ -741,7 +754,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/fea5.jpg" title="我的前半生/亦舒旧欢如梦全新增订系列"/>
+									<img src="{%static 'index/images/fea5.jpg'%}" title="我的前半生/亦舒旧欢如梦全新增订系列">
 									<span>东京一年 蒋方舟东京独居一年有声书，私人日记，日本旅游摄影，散文随笔， 陈丹青窦文涛阎连科推荐，中信 正版书</span>
 									<b>￥49.0</b>
 									<i>￥68.00</i>
@@ -749,7 +762,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/fea6.jpg" title="我的前半生/亦舒旧欢如梦全新增订系列"/>
+									<img src="{%static 'index/images/fea6.jpg'%}" title="我的前半生/亦舒旧欢如梦全新增订系列">
 									<span>东京一年 蒋方舟东京独居一年有声书，私人日记，日本旅游摄影，散文随笔， 陈丹青窦文涛阎连科推荐，中信 正版书</span>
 									<b>￥49.0</b>
 									<i>￥68.00</i>
@@ -757,7 +770,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/fea7.jpg" title="我的前半生/亦舒旧欢如梦全新增订系列"/>
+									<img src="{%static 'index/images/fea7.jpg'%}" title="我的前半生/亦舒旧欢如梦全新增订系列">
 									<span>东京一年 蒋方舟东京独居一年有声书，私人日记，日本旅游摄影，散文随笔， 陈丹青窦文涛阎连科推荐，中信 正版书</span>
 									<b>￥49.0</b>
 									<i>￥68.00</i>
@@ -765,7 +778,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/fea8.jpg" title="我的前半生/亦舒旧欢如梦全新增订系列"/>
+									<img src="{%static 'index/images/fea8.jpg'%}" title="我的前半生/亦舒旧欢如梦全新增订系列">
 									<span>东京一年 蒋方舟东京独居一年有声书，私人日记，日本旅游摄影，散文随笔， 陈丹青窦文涛阎连科推荐，中信 正版书</span>
 									<b>￥49.0</b>
 									<i>￥68.00</i>
@@ -778,7 +791,7 @@
 						<ul class="small-fea">
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/sfea1.jpg" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说" />
+									<img src="{%static 'index/images/sfea1.jpg'%}" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说">
 									<span>人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说</span>
 									<b>￥31.0</b>
 									<i>￥46.90</i>
@@ -786,7 +799,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/sfea2.jpg" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说" />
+									<img src="{%static 'index/images/sfea2.jpg'%}" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说">
 									<span>人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说</span>
 									<b>￥31.0</b>
 									<i>￥46.90</i>
@@ -794,7 +807,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/sfea3.jpg" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说" />
+									<img src="{%static 'index/images/sfea3.jpg'%}" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说">
 									<span>人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说</span>
 									<b>￥31.0</b>
 									<i>￥46.90</i>
@@ -802,7 +815,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/sfea4.jpg" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说" />
+									<img src="{%static 'index/images/sfea4.jpg'%}" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说">
 									<span>人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说</span>
 									<b>￥31.0</b>
 									<i>￥46.90</i>
@@ -810,14 +823,14 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/sfea5.jpg" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说" />
+									<img src="{%static 'index/images/sfea5.jpg'%}" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说">
 									<span>人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说</span>
 									<b>￥31.0</b>
 									<i>￥46.90</i>
 								</a>
 							</li>
 							<div class="fea-bottom">
-								<a href="#" target="_blank">更多></a>
+								<a href="#" target="_blank">更多&gt;</a>
 							</div>
 						</ul>
 					</div>
@@ -828,42 +841,42 @@
 		<div id="feature1-wrapper">
 			<div class="feature1 inner">
 				<div class="hony2">
-					<img src="../images/cover_08.jpg" class="coin"/>
+					<img src="{%static 'index/images/cover_08.jpg'%}" class="coin">
 					<span class="mony2">热门品类推荐</span>
 					<ul class="title-mune">
 
 						<li>
 							<a href="#" target="_blank" class="active1">文艺小说</a>
-							<img src="../images/xiabiao.jpg" class="coin1"/>
+							<img src="{%static 'index/images/xiabiao.jpg'%}" class="coin1">
 						</li>
 						<li>
 							<a href="#" target="_blank">儿童读书</a>
-							
+
 						</li>
 						<li>
 							<a href="#" target="_blank">经管励志</a>
-							
+
 						</li>
 						<li>
 							<a href="#" target="_blank">人文社区</a>
-							
+
 						</li>
 						<li>
 							<a href="#" target="_blank">生活艺术</a>
-						
+
 						</li>
 						<li>
 							<a href="#" target="_blank">计算机科技</a>
-						
+
 						</li>
 						<li>
 							<a href="#" target="_blank">文化教育</a>
-						
+
 						</li>
-						
-						
+
+
 					</ul>
-					
+
 				</div>
 				<div class="small-mune">
 					<a href="#" target="_blank">现当代小说</a>
@@ -883,7 +896,7 @@
 						<ul class="big_fea">
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/fea1.jpg" title="我的前半生/亦舒旧欢如梦全新增订系列"/>
+									<img src="{%static 'index/images/fea1.jpg'%}" title="我的前半生/亦舒旧欢如梦全新增订系列">
 									<span>东京一年 蒋方舟东京独居一年有声书，私人日记，日本旅游摄影，散文随笔， 陈丹青窦文涛阎连科推荐，中信 正版书</span>
 									<b>￥49.0</b>
 									<i>￥68.00</i>
@@ -891,7 +904,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/fea2.jpg" title="我的前半生/亦舒旧欢如梦全新增订系列"/>
+									<img src="{%static 'index/images/fea2.jpg'%}" title="我的前半生/亦舒旧欢如梦全新增订系列">
 									<span>东京一年 蒋方舟东京独居一年有声书，私人日记，日本旅游摄影，散文随笔， 陈丹青窦文涛阎连科推荐，中信 正版书</span>
 									<b>￥49.0</b>
 									<i>￥68.00</i>
@@ -899,7 +912,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/fea3.jpg" title="我的前半生/亦舒旧欢如梦全新增订系列"/>
+									<img src="{%static 'index/images/fea3.jpg'%}" title="我的前半生/亦舒旧欢如梦全新增订系列">
 									<span>东京一年 蒋方舟东京独居一年有声书，私人日记，日本旅游摄影，散文随笔， 陈丹青窦文涛阎连科推荐，中信 正版书</span>
 									<b>￥49.0</b>
 									<i>￥68.00</i>
@@ -907,7 +920,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/fea4.jpg" title="我的前半生/亦舒旧欢如梦全新增订系列"/>
+									<img src="{%static 'index/images/fea4.jpg'%}" title="我的前半生/亦舒旧欢如梦全新增订系列">
 									<span>东京一年 蒋方舟东京独居一年有声书，私人日记，日本旅游摄影，散文随笔， 陈丹青窦文涛阎连科推荐，中信 正版书</span>
 									<b>￥49.0</b>
 									<i>￥68.00</i>
@@ -915,7 +928,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/fea5.jpg" title="我的前半生/亦舒旧欢如梦全新增订系列"/>
+									<img src="{%static 'index/images/fea5.jpg'%}" title="我的前半生/亦舒旧欢如梦全新增订系列">
 									<span>东京一年 蒋方舟东京独居一年有声书，私人日记，日本旅游摄影，散文随笔， 陈丹青窦文涛阎连科推荐，中信 正版书</span>
 									<b>￥49.0</b>
 									<i>￥68.00</i>
@@ -923,7 +936,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/fea6.jpg" title="我的前半生/亦舒旧欢如梦全新增订系列"/>
+									<img src="{%static 'index/images/fea6.jpg'%}" title="我的前半生/亦舒旧欢如梦全新增订系列">
 									<span>东京一年 蒋方舟东京独居一年有声书，私人日记，日本旅游摄影，散文随笔， 陈丹青窦文涛阎连科推荐，中信 正版书</span>
 									<b>￥49.0</b>
 									<i>￥68.00</i>
@@ -931,7 +944,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/fea7.jpg" title="我的前半生/亦舒旧欢如梦全新增订系列"/>
+									<img src="{%static 'index/images/fea7.jpg'%}" title="我的前半生/亦舒旧欢如梦全新增订系列">
 									<span>东京一年 蒋方舟东京独居一年有声书，私人日记，日本旅游摄影，散文随笔， 陈丹青窦文涛阎连科推荐，中信 正版书</span>
 									<b>￥49.0</b>
 									<i>￥68.00</i>
@@ -939,7 +952,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/fea8.jpg" title="我的前半生/亦舒旧欢如梦全新增订系列"/>
+									<img src="{%static 'index/images/fea8.jpg'%}" title="我的前半生/亦舒旧欢如梦全新增订系列">
 									<span>东京一年 蒋方舟东京独居一年有声书，私人日记，日本旅游摄影，散文随笔， 陈丹青窦文涛阎连科推荐，中信 正版书</span>
 									<b>￥49.0</b>
 									<i>￥68.00</i>
@@ -952,7 +965,7 @@
 						<ul class="small-fea">
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/sfea1.jpg" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说" />
+									<img src="{%static 'index/images/sfea1.jpg'%}" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说">
 									<span>人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说</span>
 									<b>￥31.0</b>
 									<i>￥46.90</i>
@@ -960,7 +973,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/sfea2.jpg" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说" />
+									<img src="{%static 'index/images/sfea2.jpg'%}" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说">
 									<span>人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说</span>
 									<b>￥31.0</b>
 									<i>￥46.90</i>
@@ -968,7 +981,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/sfea3.jpg" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说" />
+									<img src="{%static 'index/images/sfea3.jpg'%}" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说">
 									<span>人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说</span>
 									<b>￥31.0</b>
 									<i>￥46.90</i>
@@ -976,7 +989,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/sfea4.jpg" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说" />
+									<img src="{%static 'index/images/sfea4.jpg'%}" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说">
 									<span>人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说</span>
 									<b>￥31.0</b>
 									<i>￥46.90</i>
@@ -984,14 +997,14 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/sfea5.jpg" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说" />
+									<img src="{%static 'index/images/sfea5.jpg'%}" title="人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说">
 									<span>人民的名义 一部反腐高压下中国政治和官场生态的长幅画卷 著名作家周梅森潜心八年政治官场小说</span>
 									<b>￥31.0</b>
 									<i>￥46.90</i>
 								</a>
 							</li>
 							<div class="fea-bottom">
-								<a href="#" target="_blank">更多></a>
+								<a href="#" target="_blank">更多&gt;</a>
 							</div>
 						</ul>
 					</div>
@@ -1002,67 +1015,67 @@
 		<div id="writer-wrapper">
 			<div class="writer inner">
 				<div class="hony2">
-					<img src="../images/cover_10.jpg" class="coin"/>
+					<img src="{%static 'index/images/cover_10.jpg'%}" class="coin">
 					<span class="mony2">作家推荐</span>
 					<ul class="title-mune">
 
 						<li>
 							<a href="#" target="_blank" class="active1">杨绛</a>
-							<img src="../images/xiabiao.jpg" class="coin1"/>
+							<img src="{%static 'index/images/xiabiao.jpg'%}" class="coin1">
 						</li>
 						<li>
 							<a href="#" target="_blank">东野圭吾</a>
-							
+
 						</li>
 						<li>
 							<a href="#" target="_blank">马尔克斯</a>
-							
+
 						</li>
 						<li>
 							<a href="#" target="_blank">曹文轩</a>
-							
+
 						</li>
 						<li>
 							<a href="#" target="_blank">毕淑敏</a>
-						
+
 						</li>
 						<li>
 							<a href="#" target="_blank">刘同</a>
-						
+
 						</li>
 						<li>
 							<a href="#" target="_blank">杨冰阳</a>
-						
+
 						</li>
-						
+
 					</ul>
 					<div class="title-rig">人气作家</div>
-					
+
 				</div>
 				<div class="writer-box">
 					<div class="writer-left">
-						<img src="../images/ying.jpg" />
+						<img src="{%static 'index/images/ying.jpg'%}">
 						<ul>
 							<li>
-								
+
 								<a href="#" target="_blank">
 									<b>【热荐】</b>
 									旅行圣经</a>
 							</li>
 							<li>
-								
+
 								<a href="#" target="_blank">
 									<b>【热荐】</b>
 									小学图书馆</a>
 							</li>
 							<li>
-								
+
 								<a href="#" target="_blank">
 									<b>【热荐】</b>
 									爱从未停止</a>
 							</li>
 							<li>
-								
+
 								<a href="#" target="_blank">
 									<b>【热荐】</b>
 									抑郁不近不远</a>
@@ -1071,7 +1084,7 @@
 					</div>
 					<div class="writer-mid">
 						<div class="perpro">
-							<img src="../images/zj1.png" />
+							<img src="{%static 'index/images/zj1.png'%}">
 							<div class="name1">
 								<a href="#" target="_blank">杨绛</a>
 							</div>
@@ -1083,7 +1096,7 @@
 						<ul class="zj-book">
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/l1.jpg" />
+									<img src="{%static 'index/images/l1.jpg'%}">
 									<div class="sile">
 										洗澡 杨绛作品 中国现当代文学作品中的新儒林外史
 									</div>
@@ -1093,7 +1106,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/l2.jpg" />
+									<img src="{%static 'index/images/l2.jpg'%}">
 									<div class="sile">
 										洗澡 杨绛作品 中国现当代文学作品中的新儒林外史
 									</div>
@@ -1103,7 +1116,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/l3.jpg" />
+									<img src="{%static 'index/images/l3.jpg'%}">
 									<div class="sile">
 										洗澡 杨绛作品 中国现当代文学作品中的新儒林外史
 									</div>
@@ -1113,7 +1126,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/l4.jpg" />
+									<img src="{%static 'index/images/l4.jpg'%}">
 									<div class="sile">
 										洗澡 杨绛作品 中国现当代文学作品中的新儒林外史
 									</div>
@@ -1200,67 +1213,67 @@
 						</ul>
 					</div>
 				</div>
-				
-			
+
+
 			</div>
 		</div>
 		<!--品牌出版 -->
 		<div id="writer-wrapper">
 			<div class="writer inner">
 				<div class="hony2">
-					<img src="../images/cover_12.jpg" class="coin"/>
+					<img src="{%static 'index/images/cover_12.jpg'%}" class="coin">
 					<span class="mony2">品牌出版</span>
 					<ul class="title-mune1">
 
 						<li>
 							<a href="#" target="_blank" class="active1">重庆出版社</a>
-							<img src="../images/big_xiaobiao.jpg" class="coin1"/>
+							<img src="{%static 'index/images/big_xiaobiao.jpg'%}" class="coin1">
 						</li>
 						<li>
 							<a href="#" target="_blank">新经典文化</a>
-							
+
 						</li>
 						<li>
 							<a href="#" target="_blank">机械工业出版社</a>
-							
+
 						</li>
 						<li>
 							<a href="#" target="_blank">电子工业出版社</a>
-							
+
 						</li>
 						<li>
 							<a href="#" target="_blank">博集天卷文化传媒</a>
-						
+
 						</li>
-					
+
 					</ul>
 					<div class="title-rig">知名出版社</div>
-					
+
 				</div>
 				<div class="writer-box">
 					<div class="writer-left">
-						<img src="../images/hl.jpg" />
+						<img src="{%static 'index/images/hl.jpg'%}">
 						<ul>
 							<li>
-								
+
 								<a href="#" target="_blank">
 									<b>【热荐】</b>
 									活的像艺术家</a>
 							</li>
 							<li>
-								
+
 								<a href="#" target="_blank">
 									<b>【热荐】</b>
 									埋没的畅销书</a>
 							</li>
 							<li>
-								
+
 								<a href="#" target="_blank">
 									<b>【热荐】</b>
 									在阅读中进步</a>
 							</li>
 							<li>
-								
+
 								<a href="#" target="_blank">
 									<b>【热荐】</b>
 									颜值社会的契合</a>
@@ -1269,7 +1282,7 @@
 					</div>
 					<div class="writer-mid">
 						<div class="perpro">
-							<img src="../images/cb1.jpg" />
+							<img src="{%static 'index/images/cb1.jpg'%}">
 							<div class="name1">
 								<a href="#" target="_blank">重庆出版社</a>
 							</div>
@@ -1281,7 +1294,7 @@
 						<ul class="zj-book">
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/cbs1.jpg" />
+									<img src="{%static 'index/images/cbs1.jpg'%}">
 									<div class="sile">
 										洗澡 杨绛作品 中国现当代文学作品中的新儒林外史
 									</div>
@@ -1291,7 +1304,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/cbs2.jpg" />
+									<img src="{%static 'index/images/cbs2.jpg'%}">
 									<div class="sile">
 										洗澡 杨绛作品 中国现当代文学作品中的新儒林外史
 									</div>
@@ -1301,7 +1314,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/cbs3.jpg" />
+									<img src="{%static 'index/images/cbs3.jpg'%}">
 									<div class="sile">
 										洗澡 杨绛作品 中国现当代文学作品中的新儒林外史
 									</div>
@@ -1311,7 +1324,7 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/cbs4.jpg" />
+									<img src="{%static 'index/images/cbs4.jpg'%}">
 									<div class="sile">
 										洗澡 杨绛作品 中国现当代文学作品中的新儒林外史
 									</div>
@@ -1358,13 +1371,13 @@
 							</li>
 							<li>
 								<a href="#" target="_blank">华夏出版社</a>
-							</li>							
-					
+							</li>
+
 						</ul>
 					</div>
 				</div>
-				
-			
+
+
 			</div>
 		</div>
 		<!-- 电子书-->
@@ -1372,14 +1385,14 @@
 			<div class="exsit inner">
 				<div class="exsit-left">
 					<div class="exsit-title1">
-						<img src="../images/cover_15.jpg" / class="pu2">
+						<img src="{%static 'index/images/cover_15.jpg'%}" class="pu2">
 						<span>电子书</span>
 					</div>
 					<div class="exsit-main">
-						<img src="../images/dz1.jpg" / class="pu1">
+						<img src="{%static 'index/images/dz1.jpg'%}" class="pu1">
 						<div class="jdsa">
 							<b class="hids"><a href="#" target="_blank">心灵甘泉系列.普希金抒情短诗集</a>
-								
+
 							</b>
 							<em>（俄罗斯）普希金</em>
 						</div>
@@ -1396,25 +1409,25 @@
 					<div class="title-k">
 						<div class="ex-mid-tit">
 							<em>客户端精品专区</em>
-							<a href="#" target="_blank">详情></a>
+							<a href="#" target="_blank">详情&gt;</a>
 						</div>
 						<div class="tit-mid">
-							
+
 								<div class="san-img">
 									<a href="#" target="_blank">
-										<img src="../images/dz2.jpg" />
+										<img src="{%static 'index/images/dz2.jpg'%}">
 									</a>
 									<a href="#" target="_blank">
-										<img src="../images/dz3.jpg" />
+										<img src="{%static 'index/images/dz3.jpg'%}">
 									</a>
 									<a href="#" target="_blank">
-										<img src="../images/dz4.jpg" />
+										<img src="{%static 'index/images/dz4.jpg'%}">
 									</a>
 								</div>
 								<ul class="type1">
 									<li>
 										<a href="#" target="_blank">
-											<img src="../images/dz5.jpg" />
+											<img src="{%static 'index/images/dz5.jpg'%}">
 											<span>上流怪物·第一季</span>
 										</a>
 										<b>
@@ -1423,7 +1436,7 @@
 									</li>
 									<li>
 										<a href="#" target="_blank">
-											<img src="../images/dz6.jpg" />
+											<img src="{%static 'index/images/dz6.jpg'%}">
 											<span>上流怪物·第一季</span>
 										</a>
 										<b>
@@ -1432,7 +1445,7 @@
 									</li>
 									<li>
 										<a href="#" target="_blank">
-											<img src="../images/dz7.jpg" />
+											<img src="{%static 'index/images/dz7.jpg'%}">
 											<span>上流怪物·第一季</span>
 										</a>
 										<b>
@@ -1441,16 +1454,16 @@
 									</li>
 									<li>
 										<a href="#" target="_blank">
-											<img src="../images/dz8.jpg" />
+											<img src="{%static 'index/images/dz8.jpg'%}">
 											<span>上流怪物·第一季</span>
 										</a>
 										<b>
 											￥8.0<i>(10)</i>
-											
+
 										</b>
 									</li>
 								</ul>
-							
+
 						</div>
 						<div class="bian-qian">
 							<ul>
@@ -1479,12 +1492,12 @@
 				<div class="exsit-rig">
 					<div class="titom">
 						<em>阅读器下载</em>
-						<a href="#" target="_blank">详情></a>
+						<a href="#" target="_blank">详情&gt;</a>
 					</div>
 					<div class="titom1">
-						
-							<img src="../images/er.jpg" />
-						
+
+							<img src="{%static 'index/images/er.jpg'%}">
+
 						<a href="#" target="_blank">android下载地址</a>
 						<a href="#" target="_blank">iphone版下载地址</a>
 						<a href="#" target="_blank">ipad版下载地址</a>
@@ -1497,13 +1510,13 @@
 		<div id="music-wrapper">
 			<div class="music inner">
 				<div class="mus-title">
-					<img src="../images/cover_18.jpg" />
+					<img src="{%static 'index/images/cover_18.jpg'%}">
 					<b>音像 精品推荐</b>
 				</div>
 				<div class="mus-main">
 					<div class="mus_lef">
-						<div class="kx">							
-						<a href="#" target="_blank"><img src="../images/yp1.jpg" /></a>
+						<div class="kx">
+						<a href="#" target="_blank"><img src="{%static 'index/images/yp1.jpg'%}"></a>
 						</div>
 						<div class="selec1">
 							<h4>热门分类</h4>
@@ -1537,44 +1550,44 @@
 					</div>
 					<div class="mus_mid">
 						<a href="#" target="_blank">
-							<img src="../images/yp2.jpg" />
+							<img src="{%static 'index/images/yp2.jpg'%}">
 						</a>
 					</div>
 					<div class="mus_rig">
 						<ul class="jp">
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/yp3.jpg" />
+									<img src="{%static 'index/images/yp3.jpg'%}">
 									<span>(CD+24页创作手札)王力宏:你的爱(精装版)(CD)</span>
 								</a>
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/yp4.jpg" />
+									<img src="{%static 'index/images/yp4.jpg'%}">
 									<span>(CD+24页创作手札)王力宏:你的爱(精装版)(CD)</span>
 								</a>
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/yp5.jpg" />
+									<img src="{%static 'index/images/yp5.jpg'%}">
 									<span>(CD+24页创作手札)王力宏:你的爱(精装版)(CD)</span>
 								</a>
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/yp6.jpg" />
+									<img src="{%static 'index/images/yp6.jpg'%}">
 									<span>(CD+24页创作手札)王力宏:你的爱(精装版)(CD)</span>
 								</a>
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/yp7.jpg" />
+									<img src="{%static 'index/images/yp7.jpg'%}">
 									<span>(CD+24页创作手札)王力宏:你的爱(精装版)(CD)</span>
 								</a>
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/yp8.jpg" />
+									<img src="{%static 'index/images/yp8.jpg'%}">
 									<span>(CD+24页创作手札)王力宏:你的爱(精装版)(CD)</span>
 								</a>
 							</li>
@@ -1587,13 +1600,13 @@
 		<div id="music-wrapper">
 			<div class="music inner">
 				<div class="mus-title">
-					<img src="../images/cover_21.jpg" />
+					<img src="{%static 'index/images/cover_21.jpg'%}">
 					<b>百货 精品推荐</b>
 				</div>
 				<div class="mus-main">
 					<div class="mus_lef">
-						<div class="kx">							
-						<a href="#" target="_blank"><img src="../images/bh1.jpg" /></a>
+						<div class="kx">
+						<a href="#" target="_blank"><img src="{%static 'index/images/bh1.jpg'%}"></a>
 						</div>
 						<div class="selec1">
 							<h4>入驻商家</h4>
@@ -1619,50 +1632,50 @@
 								<li>
 									<a href="#" target="_blank">邦蒂</a>
 								</li>
-								
+
 							</ul>
 						</div>
 					</div>
 					<div class="mus_mid">
 						<a href="#" target="_blank">
-							<img src="../images/bh2.jpg" />
+							<img src="{%static 'index/images/bh2.jpg'%}">
 						</a>
 					</div>
 					<div class="mus_rig">
 						<ul class="jp">
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/bh3.jpg" />
+									<img src="{%static 'index/images/bh3.jpg'%}">
 									<span>Kindle电子书阅读器(入门版）：167 ppi电子墨水触控屏、无内置阅读灯、超长续航</span>
 								</a>
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/bh4.jpg" />
+									<img src="{%static 'index/images/bh4.jpg'%}">
 									<span>Kindle电子书阅读器(入门版）：167 ppi电子墨水触控屏、无内置阅读灯、超长续航</span>
 								</a>
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/bh5.jpg" />
+									<img src="{%static 'index/images/bh5.jpg'%}">
 									<span>Kindle电子书阅读器(入门版）：167 ppi电子墨水触控屏、无内置阅读灯、超长续航</span>
 								</a>
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/bh6.jpg" />
+									<img src="{%static 'index/images/bh6.jpg'%}">
 									<span>Kindle电子书阅读器(入门版）：167 ppi电子墨水触控屏、无内置阅读灯、超长续航</span>
 								</a>
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/bh7.jpg" />
+									<img src="{%static 'index/images/bh7.jpg'%}">
 									<span>Kindle电子书阅读器(入门版）：167 ppi电子墨水触控屏、无内置阅读灯、超长续航</span>
 								</a>
 							</li>
 							<li>
 								<a href="#" target="_blank">
-									<img src="../images/bh8.jpg" />
+									<img src="{%static 'index/images/bh8.jpg'%}">
 									<span>Kindle电子书阅读器(入门版）：167 ppi电子墨水触控屏、无内置阅读灯、超长续航</span>
 								</a>
 							</li>
@@ -1671,50 +1684,50 @@
 				</div>
 			</div>
 		</div>
-		<!--文轩加盟店 -->	
+		<!--文轩加盟店 -->
 		<div id="shoppy-wrapper">
 			<div class="shoppy inner">
 				<div class="hipsd">
 					<a href="#" target="_blank">
-						<img src="../images/dm1.jpg" />
+						<img src="{%static 'index/images/dm1.jpg'%}">
 					</a>
 				</div>
 				<ul class="errs">
 					<li>
-						<img src="../images/dm2.jpg" />
+						<img src="{%static 'index/images/dm2.jpg'%}">
 						<h4>手机文轩</h4>
 						<h5>扫一扫，轻松手机购物！</h5>
-						
+
 					</li>
 					<li>
-						<img src="../images/dm3.jpg" />
+						<img src="{%static 'index/images/dm3.jpg'%}">
 						<h4>电子书客户端</h4>
 						<h5>随时随地享受读好书的乐趣！</h5>
 						<a href="#" target="_blank">
-							<img src="../images/apple.jpg" />
+							<img src="{%static 'index/images/apple.jpg'%}">
 							<span>AppStore</span>
 						</a>
 						<a href="#" target="_blank">
-							<img src="../images/app.jpg" />
+							<img src="{%static 'index/images/app.jpg'%}">
 							<span>Android</span>
-							
+
 						</a>
 					</li>
 					<li>
-						<img src="../images/dm4.jpg" />
+						<img src="{%static 'index/images/dm4.jpg'%}">
 						<h4>文轩网微信公众号</h4>
 						<h5>即刻与文轩亲密互动，还有劲爆优惠等你来拿！</h5>
 					</li>
 					<li>
-						<img src="../images/dm5.jpg" />
+						<img src="{%static 'index/images/dm5.jpg'%}">
 						<h4>文轩官方微博</h4>
 						<h5>马上关注文轩网，第一时间掌握最新优惠促销信息！</h5>
-						<a href="#" target="_blank"style="margin-top: 5px;margin-left:8px;width: 70px;">+ 立即关注</a>
+						<a href="#" target="_blank" style="margin-top: 5px;margin-left:8px;width: 70px;">+ 立即关注</a>
 					</li>
 				</ul>
 			</div>
 		</div>
-		
+
 		<!--尾部 -->
 		<div id="foot-wrapper">
 			<div class="foot inner">
@@ -1748,7 +1761,7 @@
 							<dd><a href="#" target="_blank">退换货规则</a></dd>
 							<dd><a href="#" target="_blank">如何申请售后服务</a></dd>
 							<dd><a href="#" target="_blank">退款及提现</a></dd>
-							
+
 						</li>
 						<li class="service-list">
 							<dt>我的订单</dt>
@@ -1775,7 +1788,7 @@
 					</ul>
 				</div>
 				<div class="foot-two">
-					
+
 				</div>
 				<div class="foot-thr">
 					<div class="foot-nav">
@@ -1784,14 +1797,14 @@
 						<a href="#" target="_blank">加入文轩</a> |
 						<a href="#" target="_blank">合作伙伴</a>
 					</div>
-					<br />
-					<a href="#" target="_blank"style="display: inline-block;height: 20px;line-height: 20px;text-decoration: none;"><img src="../images/gawj.png" /> 川公网安备 51010602000457号</a> | 增值电信业务经营许可证：川B2-20100040 |
+					<br>
+					<a href="#" target="_blank" style="display: inline-block;height: 20px;line-height: 20px;text-decoration: none;"><img src="{%static 'index/images/gawj.png'%}"> 川公网安备 51010602000457号</a> | 增值电信业务经营许可证：川B2-20100040 |
 					<a href="#" target="_blank">出版物经营许可证</a> | 蜀ICP备11014037号
-					<br /><br />
-					Copyright(C) 
+					<br><br>
+					Copyright(C)
 					<a href="#" target="_blank">文轩网</a> 2000-2017 版权所有 | 客服热线：400-702-0808 　
-					<br />
-					<img src="../images/scgswjlogo.png" />
+					<br>
+					<img src="{%static 'index/images/scgswjlogo.png'%}">
 				</div>
 			</div>
 		</div>

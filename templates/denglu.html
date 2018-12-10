@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'login/css/reset.css' %}"/>
 		<style>
 			#box{width: 260px;height: 260px;border: 2px dotted #ddd;background: #fff;position: absolute;left: 50%;margin-left: -150px;top: 50%;margin-top: -150px;padding: 20px;}
 			.top{width: 260px;height: 30px;text-align: right;line-height: 30px;font-size: 15px;color: #666;font-weight: bold;}
@@ -12,7 +13,7 @@
 			#btn{width: 80px;height: 30px;background: #F27F02;border-radius:5px ;color: #fff;border: 1px solid #F27F02;}
 			form{display: block;width: 260px;height: 200px;margin-top: 20px;}
 		</style>
-		<script src="../js/cookie.js"></script>
+		<script src="{% static 'login/js/cookie.js'%}"></script>
 		<script>
 			onload = function(){
 				var otet = document.getElementById("tet");
@@ -53,7 +54,7 @@
 	<body>
 		<div id="box">
 			<div class="top">
-				<a href="index.html"><img src="../images/logo%20(1).png"/></a>
+				<a href="index.html"><img src="{% static 'login/images/logo (1).png'%}"/></a>
 				
 				登录
 			
