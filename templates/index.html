@@ -49,11 +49,11 @@
 				</div>
 				<ul class="he-r">
 					<li>
-						<span>您好，欢迎光临文轩网！</span>
+						<span>{{ name }}您好，欢迎光临文轩网！</span>
 					</li>
 					<li class="login">
-						<a href="denglu.html" target="_blank" id="col"></a>
-						<a href="zhuce.html" target="_blank" id="kiu">【免费注册】</a>
+						<a href="{% url 'mymission:login' %}" target="_blank" id="col"></a>
+						<a href="{% url 'mymission:register' %}" target="_blank" id="kiu">【免费注册】</a>
 					</li>
 					<li class="list1">
 						<a href="#" target="_blank">我的订单</a>
@@ -160,13 +160,13 @@
                     -->
 					<div class="myself">
 						<b></b>
-						<a href="#" target="_blank">我的文轩</a>
+						<a href="{% url 'mymission:login' %}" target="_blank">我的文轩</a>
 						<i></i>
 					</div>
 					<div class="b_car">
 						<b></b>
 						<span id="did">0</span>
-						<a href="gouwuche.html" target="_blank">购物车</a>
+						<a href="{% url 'mymission:cart' %}" target="_blank">购物车</a>
 						<i></i>
 					</div>
 
@@ -211,16 +211,11 @@
         </div>
         </div>
 
-
-
-
-
-
-
-
-
-
-
+{#        {% for wheel in wheels %}#}
+{#            <img src="{% url 'img' %}" alt="">#}
+{#        {% endfor %}#}
+{#        #}
+        
 
 
 
@@ -468,15 +463,15 @@
 						<ul>
 							<li>
 								<a href="{% url 'mymission:small' %}" target="_blank">
-									<img src="{%static 'index/images/1200719594_10_1.jpg'%}">
-									<span>超值9.9</span>
-									<strong>￥9.9</strong>
-									<i>￥28.0</i>
+									<img src="{%static 'index/images/small.jpg'%}">
+{#									<span>超值9.9</span>#}
+									<strong>￥22.8</strong>
+{#									<i>￥22.8</i>#}
 								</a>
 							</li>
 							<li>
-								<a href="{% url 'mymission:small' %}" target="_blank">
-									<img src="{%static 'index/images/1201241234_10_1.jpg'%}">
+								<a href="{% url 'mymission:small1' %}" target="_blank">
+									<img src="{%static 'index/images/small1.jpg'%}">
 									<span>超值9.9</span>
 									<strong>￥9.9</strong>
 									<i>￥28.0</i>
