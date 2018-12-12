@@ -10,4 +10,5 @@ urlpatterns=[
     url(r'^small1/$',views.small1,name='small1'),
     url(r'^zhuce/$',views.zhuce,name='register'),
     # url(r'^mine/$',views.mine,name='mine'),
+    url(r'^checkname/$',views.checkname,name='checkname'),
 ]

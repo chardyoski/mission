@@ -6,7 +6,19 @@ $(function () {
         if (reg.test($(this).val())) {
                   $('#toast').html("<b>\"用户名合法\"</b>")
 
-              } else {
+
+            $.get('/mymission/checkname',{'name':$(this).val()},function (response) {
+                console.log(response)
+                $('#vt').html(response.msg)
+                // if (response.status):
+                // {
+                //
+                // }
+                //     else
+
+            })
+
+               } else {
             $('#toast').html("<b>\"用户名不合法\"</b>")
 
         }

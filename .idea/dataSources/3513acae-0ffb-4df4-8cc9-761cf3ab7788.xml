@@ -1477,10 +1477,19 @@ model</ColNames>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="342" parent="249" name="PRIMARY">
+    <index id="342" parent="249" name="wx_user_name_9c2aebff_uniq">
+      <ColNames>name</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="343" parent="249" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
+    </key>
+    <key id="344" parent="249" name="wx_user_name_9c2aebff_uniq">
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>wx_user_name_9c2aebff_uniq</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

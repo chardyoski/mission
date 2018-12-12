@@ -54,15 +54,17 @@
 	<body>
 		<div id="box">
 			<div class="top">
-				<a href="index.html"><img src="{% static 'login/images/logo (1).png'%}"/></a>
+				<a href="{% url 'mymission:index' %}"><img src="{% static 'login/images/logo (1).png'%}"/></a>
 				
 				登录
 			
 			</div>
-		<form>
-			用户名：<input type="text" id="tet" placeholder="请输入用户名"/><br />
-			密&nbsp;码：<input type="password"id="pas" placeholder="请输入密码"/><br />
-			登&nbsp;录：<input type="button"id="btn"value="登录"><a href="{% url 'mymission:register' %}" style="margin-left: 30px;display: inline-block;width: 80px;height: 30px;background: #09BEE3;color: #fff;line-height: 30px;text-align: center;border-radius: 5px;">免费注册</a>
+		<form action="{% url 'mymission:login' %}" method="post" id="login">
+            {% csrf_token %}
+			用户名：<input type="text" id="tet" placeholder="请输入用户名" name="name"/><br />
+			密&nbsp;码：<input type="password" id="pas" placeholder="请输入密码" name="password"/><br />
+			登&nbsp;录：<input type="submit" id="btn" value="登录">
+            <a href="{% url 'mymission:register' %}" style="margin-left: 30px;display: inline-block;width: 80px;height: 30px;background: #09BEE3;color: #fff;line-height: 30px;text-align: center;border-radius: 5px;">免费注册</a>
 		</form>
 		</div>
 	</body>

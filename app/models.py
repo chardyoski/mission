@@ -8,7 +8,7 @@ class Wheel(models.Model):
 
 
 class User(models.Model):
-    name=models.CharField(max_length=40)
+    name=models.CharField(max_length=40,unique=True)
     password=models.CharField(max_length=256)
     phone=models.CharField(max_length=20)
     token = models.CharField(max_length=256)

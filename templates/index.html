@@ -19,25 +19,25 @@
 {#        <script src="{% static 'index/js/swiper.min.js'%}"></script>#}
 
 
-		<script>
-			onload = function(){
-				
-				var ocol = document.getElementById("col")
-				
-				var user = getCookie("user");
-				
-				if(ocol.innerHTML = user){
-					console.log(user);
-					ocol.innerHTML = user
-					
-				}
-				else{
-					ocol.innerHTML = "【登录】"
-				}
-				 
-				 
-			}
-		</script>
+{#		<script>#}
+{#			onload = function(){#}
+{##}
+{#				var ocol = document.getElementById("col")#}
+{##}
+{#				var user = getCookie("user");#}
+{##}
+{#				if(ocol.innerHTML = user){#}
+{#					console.log(user);#}
+{#					ocol.innerHTML = user#}
+{##}
+{#				}#}
+{#				else{#}
+{#					ocol.innerHTML = "【登录】"#}
+{#				}#}
+{##}
+{##}
+{#			}#}
+{#		</script>#}
 
 	</head>
 	<body>
@@ -52,7 +52,7 @@
 						<span>{{ name }}您好，欢迎光临文轩网！</span>
 					</li>
 					<li class="login">
-						<a href="{% url 'mymission:login' %}" target="_blank" id="col"></a>
+						<a href="{% url 'mymission:login' %}" target="_blank" id="col">【登录】</a>
 						<a href="{% url 'mymission:register' %}" target="_blank" id="kiu">【免费注册】</a>
 					</li>
 					<li class="list1">
@@ -566,50 +566,52 @@
 					<b class="tiper1">倾情推荐时下最热门图书,这里做了跳转界面</b>
 				</div>
 				<ul class="pic-pop1">
-					<li>
-						<a href="small.html?id=" +id="" target="_blank">
-							<img src="{%static 'index/images/ss1.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">
-							<span>双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船 多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说</span>
-							<b>￥188.0</b>
-							<i>￥198.0</i>
-						</a>
-						<div class="description">
-							<a href="#">超热美剧《双峰》官方授权的“档案小说”！大牌编剧亲自操刀，集邪典Cult、亚文化、神秘主义、邪教、凶案于一身的玄妙巨作</a>
-						</div>
-					</li>
-					<li>
-						<a href="small.html?id=" +id="" target="_blank">
-							<img src="{%static 'index/images/ss2.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">
-							<span>双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船 多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说</span>
-							<b>￥188.0</b>
-							<i>￥198.0</i>
-						</a>
-						<div class="description">
-							<a href="#">超热美剧《双峰》官方授权的“档案小说”！大牌编剧亲自操刀，集邪典Cult、亚文化、神秘主义、邪教、凶案于一身的玄妙巨作</a>
-						</div>
-					</li>
-					<li>
-						<a href="small.html?id=" +id="" target="_blank">
-							<img src="{%static 'index/images/ss3.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">
-							<span>双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船 多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说</span>
-							<b>￥188.0</b>
-							<i>￥198.0</i>
-						</a>
-						<div class="description">
-							<a href="#">超热美剧《双峰》官方授权的“档案小说”！大牌编剧亲自操刀，集邪典Cult、亚文化、神秘主义、邪教、凶案于一身的玄妙巨作</a>
-						</div>
-					</li>
-					<li>
-						<a href="small.html?id=" +id="" target="_blank">
-							<img src="{%static 'index/images/ss4.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">
-							<span>双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船 多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说</span>
-							<b>￥188.0</b>
-							<i>￥198.0</i>
-						</a>
-						<div class="description">
-							<a href="#">超热美剧《双峰》官方授权的“档案小说”！大牌编剧亲自操刀，集邪典Cult、亚文化、神秘主义、邪教、凶案于一身的玄妙巨作</a>
-						</div>
-					</li>
+{#					<li>#}
+{#						<a href="small.html?id=" +id="" target="_blank">#}
+{#							<img src="{%static 'index/images/ss1.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">#}
+{#							<span>双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船 多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说</span>#}
+{#							<b>￥188.0</b>#}
+{#							<i>￥198.0</i>#}
+{#						</a>#}
+{#						<div class="description">#}
+{#							<a href="#">超热美剧《双峰》官方授权的“档案小说”！大牌编剧亲自操刀，集邪典Cult、亚文化、神秘主义、邪教、凶案于一身的玄妙巨作</a>#}
+{#						</div>#}
+{#					</li>#}
+{#					<li>#}
+{#						<a href="small.html?id=" +id="" target="_blank">#}
+{#							<img src="{%static 'index/images/ss2.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">#}
+{#							<span>双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船 多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说</span>#}
+{#							<b>￥188.0</b>#}
+{#							<i>￥198.0</i>#}
+{#						</a>#}
+{#						<div class="description">#}
+{#							<a href="#">超热美剧《双峰》官方授权的“档案小说”！大牌编剧亲自操刀，集邪典Cult、亚文化、神秘主义、邪教、凶案于一身的玄妙巨作</a>#}
+{#						</div>#}
+{#					</li>#}
+{#					<li>#}
+{#						<a href="small.html?id=" +id="" target="_blank">#}
+{#							<img src="{%static 'index/images/ss3.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">#}
+{#							<span>双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船 多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说</span>#}
+{#							<b>￥188.0</b>#}
+{#							<i>￥198.0</i>#}
+{#						</a>#}
+{#						<div class="description">#}
+{#							<a href="#">超热美剧《双峰》官方授权的“档案小说”！大牌编剧亲自操刀，集邪典Cult、亚文化、神秘主义、邪教、凶案于一身的玄妙巨作</a>#}
+{#						</div>#}
+{#					</li>#}
+{#					<li>#}
+{#						<a href="small.html?id=" +id="" target="_blank">#}
+{#							<img src="{%static 'index/images/ss4.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">#}
+{#							<span>双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船 多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说</span>#}
+{#							<b>￥188.0</b>#}
+{#							<i>￥198.0</i>#}
+{#						</a>#}
+{#						<div class="description">#}
+{#							<a href="#">超热美剧《双峰》官方授权的“档案小说”！大牌编剧亲自操刀，集邪典Cult、亚文化、神秘主义、邪教、凶案于一身的玄妙巨作</a>#}
+{#						</div>#}
+{#					</li>#}
+
+
 					<li>
 						<a href="small.html?id=" +id="" target="_blank">
 							<img src="{%static 'index/images/ss5.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">
