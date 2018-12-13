@@ -9,7 +9,7 @@
 		<script src="{% static 'small1/js/jquery-1.12.3.js' %}"></script>
 		<script src="{% static 'small1/js/xiangqing.js' %}"></script>
 		<script src="{% static 'small1/js/jquery.cookie.js' %}"></script>
-		<script src="{% static 'small1/js/small.js' %}"></script>
+		<script src="{% static 'small/js/small.js' %}"></script>
 {#        <script src="{% static 'small1/js/test.js' %}"></script>#}
 		
 	</head>
@@ -25,8 +25,17 @@
 						<span>您好，欢迎光临文轩网！</span>
 					</li>
 					<li class="login">
-						<a href="#" target="_blank" class="col">【登录】</a>
-						<a href="#" target="_blank" class="col">【免费注册】</a>
+{#						<a href="{% url 'mymission:login' %}" target="_blank" id="col">【登录】</a>#}
+
+                           <a href="{% url 'mymission:login' %}">
+                        {{ name | default:'登录' }}
+                        </a>
+                        {% if name %}
+
+                    <a href="{% url 'mymission:logout' %}"> 退出登录 </a>
+
+                         {% endif %}
+						<a href="{% url 'mymission:register' %}" target="_blank" id="kiu">【免费注册】</a>
 					</li>
 					<li class="list1">
 						<a href="#" target="_blank">我的订单</a>
@@ -106,7 +115,7 @@
 		<div id="search-wrapper">
 			<div class="search inner">
 				<div class="logo">
-					<a href="#">
+					<a href="{% url 'mymission:index' %}">
 						<img src="{%static 'small1/images/logo.png'%}">
 					</a>
 				</div>
@@ -138,7 +147,7 @@
 					<div class="b_car">
 						<b></b>
 						<span id="did">0</span>
-						<a href="#" target="_blank">购物车</a>
+						<a href="{% url 'mymission:cart' %}" target="_blank">购物车</a>
 						<i></i>
 					</div>
 
@@ -185,7 +194,7 @@
 								<strong>摔跤吧爸爸 </strong>
 							</a>
 								<div class="pires">
-									文轩价：<span>¥27.30</span>
+									文轩价：<span>¥9.9</span>
 								</div>
 
 						</li>
@@ -195,7 +204,7 @@
 								<strong>摔跤吧爸爸 </strong>
 							</a>
 								<div class="pires">
-									文轩价：<span>¥27.30</span>
+									文轩价：<span>¥9.9</span>
 								</div>
 
 						</li>
@@ -205,7 +214,7 @@
 								<strong>摔跤吧爸爸 </strong>
 							</a>
 								<div class="pires">
-									文轩价：<span>¥27.30</span>
+									文轩价：<span>¥9.9</span>
 								</div>
 
 						</li>
@@ -215,7 +224,7 @@
 								<strong>摔跤吧爸爸 </strong>
 							</a>
 								<div class="pires">
-									文轩价：<span>¥27.30</span>
+									文轩价：<span>¥9.9</span>
 								</div>
 
 						</li>
@@ -225,7 +234,7 @@
 								<strong>摔跤吧爸爸 </strong>
 									</a>
 								<div class="pires">
-									文轩价：<span>¥27.30</span>
+									文轩价：<span>¥9.9</span>
 								</div>
 
 						</li>
@@ -235,7 +244,7 @@
 								<strong>摔跤吧爸爸 </strong>
 								</a>
 								<div class="pires">
-									文轩价：<span>¥27.30</span>
+									文轩价：<span>¥9.9</span>
 								</div>
 
 						</li>
@@ -281,17 +290,17 @@
 						</div>
 						<div class="rit_title">
 							<h1>摔跤吧爸爸</h1>
-							<h3>中国当代都市青春文学，成长励志自我实现，人际交往书，正能量心理学书，新华书店正版畅销图书</h3>
+							<h3>当代都市青春文学，成长励志自我实现，人际交往书，正能量心理学书，新华书店正版畅销图书</h3>
 						</div>
 						<div class="fenlei">
 							<div class="pie-o">
 								<span>定　　价 ：</span>
-								<b class="pju">¥35.00</b>
+								<b class="pju">¥{{ book2.marketprice }}</b>
 							</div>
 							<div class="wxjia">
 								<span>文 轩 价 ：</span>
-								<em class="price">¥27.30</em>
-								<i>（6.5折）</i>
+								<em class="price">¥{{ book2.price }}</em>
+								<i>（3.5折）</i>
 								<a href="#" target="_blank">（降价通知）</a>
 							</div>
 							<div class="peisong">
@@ -318,15 +327,15 @@
 						<div class="buymore">
 							<div class="much">
 								<span>购买数量 ：</span>
-								<b class="much-more">
-									<a class="reduce-btn">-</a>
-									<input type="text" value="1" class="buy-much">
-									<a class="add-btn">+</a>
-								</b>件
+								<span class="much-more">
+									<span class="reduce-btn" booksid="2">-</span>
+                                    <span class="num">{{ carts.number }}</span>
+									<span class="add-btn" booksid="2">+</span>
+								</span>件
 							</div>
 
 								<div id="cart">
-									<a target="_blank" style="cursor: pointer;" href="gouwuche.html"></a>
+									<a target="_blank" style="cursor: pointer;" href="{% url 'mymission:cart' %}"></a>
 								</div>
 
 

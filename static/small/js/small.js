@@ -19,7 +19,7 @@ $(function(){
 		var booksid = $(this).attr('booksid')
 		var $that = $(this)
 		$.get('/mymission/addcart/', {'booksid': booksid}, function (response) {
-			console.log(response)
+			// console.log(response)
 			if (response.status == -1) {
 				window.open('/mymission/denglu', target = '_self')
 			} else (response.status == 1)
@@ -36,7 +36,7 @@ $(function(){
         var $that = $(this)
 
         $.get('/mymission/subcart/', {'booksid':booksid}, function (response) {
-            console.log(response)
+            // console.log(response)
             if (response.status == 1){  // 操作成功
                 if (response.number > 0){   // 改变数据
                     $that.next().html(response.number)

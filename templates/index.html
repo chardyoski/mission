@@ -582,7 +582,7 @@
                 <ul class="pic-pop1">
                    {% for book in books %}
                     <li>
-                        <a href="#">
+                        <a href="{% url 'mymission:small1' %}">
                         <img src="{{ book.productimg }}" alt="">
                     <b>￥{{ book.price }}</b>
                     <i>￥{{ book.marketprice }}</i>

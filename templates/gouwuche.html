@@ -43,13 +43,17 @@
 					<input type="checkbox" checked="checked" id="allCheck" />全选
 					
 					<ul id="list">
-                        <li><img src="{{ carts.books.productimg }}" alt="">
-                            <span>谁的青春不迷茫</span>
-                            <span>￥ {{ carts.books.price }}</span>
+                        {% for cart in carts %}
+                        <li><img src="{{ cart.books.productimg }}" alt="">
+                                <span>{{ cart.books_id}}</span>
+                            <span>￥ {{ cart.books.price }}</span>
                             <span>---------------------------------------------------------------------</span>
 
-                            <span>{{ carts.number }}</span>
+                            <span>{{ cart.number }}</span>
                         </li>
+                        {% endfor %}
+
+
 						<!--<li>
 							<input class="check" type="checkbox" />
 							<img src="images/small.jpg" />
@@ -67,7 +71,7 @@
 		
 			</div> 
 				<div class="gou">
-					<a  class="continue">
+					<a  class="continue" href="{% url 'mymission:index' %}">
 						
 					</a>
 					<a  class="balance">

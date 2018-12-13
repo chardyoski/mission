@@ -26,9 +26,11 @@ def index(request):
     wheels = Wheel.objects.all()
     books=Books.objects.all()
     book1=Books.objects.first()
+    book2=Books.objects.filter(id=2)[0]
     data = {'wheels':wheels,
             'books':books,
-            'book1':book1}
+            'book1':book1,
+            'book2':book2,}
 
     if token:
         user = User.objects.get(token=token)
@@ -70,6 +72,7 @@ def small(request):
     token = request.session.get('token')
     # carts = []
     book1 = Books.objects.first()
+    print(book1.id)
     # productid = request.GET.get('productid')
     # print(productid)
 
@@ -89,7 +92,27 @@ def small(request):
 
 def small1(request):
 
-    return render(request,'small1.html')
+    token = request.session.get('token')
+    book2 = Books.objects.filter(id=2)[0]
+    print(book2.id)
+    # carts = []
+
+    # productid = request.GET.get('productid')
+    # print(productid)
+
+
+
+    if token:
+        user = User.objects.get(token=token)
+        carts = Cart.objects.filter(user=user).filter(id=2)
+        name = user.name
+
+    data = {'book2': book2,
+            'carts': carts,
+            'name':name,
+            }
+
+    return render(request,'small1.html',context=data)
 
 
 
@@ -144,10 +167,12 @@ def gouwuche(request):
     #     # data['img'] = user.img
     #
     # return render(request,'gouwuche.html', context=data)
+
     token = request.session.get('token')
+    carts = []
     if token:
         user = User.objects.get(token=token)
-        carts = Cart.objects.filter(user=user).exclude(number=0).first()
+        carts = Cart.objects.filter(user=user).exclude(number=0)
 
         data = {
             'carts': carts
