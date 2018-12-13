@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4910f7e9-7bbf-4b7b-95f9-b5cf7f5025c2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/small/js/small.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/small/js/small.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/gouwuche.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/gouwuche.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/small.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/small.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/small1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/small1.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="59" column="37" lean-forward="true" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
+            <state relative-caret-position="195">
+              <caret line="475" column="40" selection-start-line="475" selection-start-column="40" selection-end-line="475" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -80,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+            <state relative-caret-position="105">
+              <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
             </state>
           </provider>
         </entry>
@@ -137,16 +133,16 @@
         <option value="$PROJECT_DIR$/templates/denglu.html" />
         <option value="$PROJECT_DIR$/app/urls.py" />
         <option value="$PROJECT_DIR$/static/cart/js/mycart.js" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/small.html" />
         <option value="$PROJECT_DIR$/templates/gouwuche.html" />
         <option value="$PROJECT_DIR$/static/small/js/small.js" />
         <option value="$PROJECT_DIR$/templates/small1.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/app/views.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1" />
     <option name="y" value="25" />
     <option name="width" value="573" />
@@ -301,12 +297,12 @@
       <workItem from="1544403832712" duration="3920000" />
       <workItem from="1544420990984" duration="44668000" />
       <workItem from="1544573879743" duration="33660000" />
-      <workItem from="1544686592213" duration="6056000" />
+      <workItem from="1544686592213" duration="9660000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121178000" />
+    <option name="totallyTimeSpent" value="124782000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -321,7 +317,7 @@
     <frame x="67" y="25" width="1295" height="590" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.29383507" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29383507" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -492,20 +488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/small1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="299" column="47" lean-forward="true" selection-start-line="299" selection-start-column="47" selection-end-line="299" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="59" column="37" lean-forward="true" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://3513acae-0ffb-4df4-8cc9-761cf3ab7788/schema/mission/table/app_books">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -513,10 +495,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="475" column="40" selection-start-line="475" selection-start-column="40" selection-end-line="475" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/small1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="299" column="47" lean-forward="true" selection-start-line="299" selection-start-column="47" selection-end-line="299" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+        <state relative-caret-position="105">
+          <caret line="95" lean-forward="true" selection-start-line="95" selection-end-line="95" />
         </state>
       </provider>
     </entry>

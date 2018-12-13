@@ -25,12 +25,13 @@ def index(request):
     token = request.session.get('token')
     wheels = Wheel.objects.all()
     books=Books.objects.all()
-    book1=Books.objects.first()
-    book2=Books.objects.filter(id=2)[0]
+    # book1=Books.objects.first()
+    # book2=Books.objects.filter(id=2)[0]
     data = {'wheels':wheels,
             'books':books,
-            'book1':book1,
-            'book2':book2,}
+            # 'book1':book1,
+            # 'book2':book2,
+            }
 
     if token:
         user = User.objects.get(token=token)
@@ -70,23 +71,24 @@ def denglu(request):
 
 def small(request):
     token = request.session.get('token')
-    # carts = []
+    carts = []
     book1 = Books.objects.first()
-    print(book1.id)
+
     # productid = request.GET.get('productid')
     # print(productid)
 
+    data = {'book1': book1,
+            'carts': carts,
 
+            }
 
     if token:
         user = User.objects.get(token=token)
         carts = Cart.objects.filter(user=user).first()
-        name = user.name
+        data['name'] = user.name
 
-    data = {'book1': book1,
-            'carts': carts,
-            'name':name,
-            }
+
+
     return render(request,'small.html',context=data)
 
 
@@ -95,24 +97,25 @@ def small1(request):
     token = request.session.get('token')
     book2 = Books.objects.filter(id=2)[0]
     print(book2.id)
-    # carts = []
+    carts=[]
 
     # productid = request.GET.get('productid')
     # print(productid)
-
+    data = {'book2': book2,
+            'carts': carts,
+            }
 
 
     if token:
         user = User.objects.get(token=token)
         carts = Cart.objects.filter(user=user).filter(id=2)
-        name = user.name
+        data['name'] = user.name
 
-    data = {'book2': book2,
-            'carts': carts,
-            'name':name,
-            }
+
 
     return render(request,'small1.html',context=data)
+
+
 
 
 
