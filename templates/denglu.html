@@ -62,8 +62,13 @@
 		<form action="{% url 'mymission:login' %}" method="post" id="login">
             {% csrf_token %}
 			用户名：<input type="text" id="tet" placeholder="请输入用户名" name="name"/><br />
+            <p style="color: red">
+                    {{ u_error }}
+                </p>
 			密&nbsp;码：<input type="password" id="pas" placeholder="请输入密码" name="password"/><br />
+
 			登&nbsp;录：<input type="submit" id="btn" value="登录">
+
             <a href="{% url 'mymission:register' %}" style="margin-left: 30px;display: inline-block;width: 80px;height: 30px;background: #09BEE3;color: #fff;line-height: 30px;text-align: center;border-radius: 5px;">免费注册</a>
 		</form>
 		</div>

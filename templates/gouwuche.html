@@ -6,6 +6,7 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="{% static 'cart/css/reset.css'%}"/>
 		<link rel="stylesheet" type="text/css" href="{% static 'cart/css/gouwuche.css'%}"/>
+        <script src="{% static 'cart/js/mycart.js' %}"></script>
 		<script src="{% static 'cart/js/jquery-1.12.3.js'%}"></script>
 		<script src="{% static 'cart/js/jquery.cookie.js'%}"></script>
 		<script src="{% static 'cart/js/small.js'%}"></script>
@@ -42,6 +43,13 @@
 					<input type="checkbox" checked="checked" id="allCheck" />全选
 					
 					<ul id="list">
+                        <li><img src="{{ carts.books.productimg }}" alt="">
+                            <span>谁的青春不迷茫</span>
+                            <span>￥ {{ carts.books.price }}</span>
+                            <span>---------------------------------------------------------------------</span>
+
+                            <span>{{ carts.number }}</span>
+                        </li>
 						<!--<li>
 							<input class="check" type="checkbox" />
 							<img src="images/small.jpg" />

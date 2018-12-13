@@ -24,8 +24,17 @@
 						<span>您好，欢迎光临文轩网！</span>
 					</li>
 					<li class="login">
-						<a href="{% url 'mymission:login' %}" target="_blank" class="col">【登录】</a>
-						<a href="{% url 'mymission:register' %}" target="_blank" class="col">【免费注册】</a>
+{#						<a href="{% url 'mymission:login' %}" target="_blank" id="col">【登录】</a>#}
+
+                           <a href="{% url 'mymission:login' %}">
+                        {{ name | default:'登录' }}
+                        </a>
+                        {% if name %}
+
+                    <a href="{% url 'mymission:logout' %}"> 退出登录 </a>
+
+                         {% endif %}
+						<a href="{% url 'mymission:register' %}" target="_blank" id="kiu">【免费注册】</a>
 					</li>
 					<li class="list1">
 						<a href="#" target="_blank">我的订单</a>
@@ -247,7 +256,7 @@
 				<div class="bk-by">
 					<div class="small-img">
 						<div id="smallImg">
-							<img src="{%static 'small/images/small.jpg'%}">
+							<img src="{{ book1.productimg }}">
 							<div id="smallArea" style="width: 233.333px; height: 233.333px;"></div>
 						</div>
 
@@ -285,11 +294,11 @@
 						<div class="fenlei">
 							<div class="pie-o">
 								<span>定　　价 ：</span>
-								<b class="pju">¥35.00</b>
+								<b class="pju">¥{{ book1.marketprice }}</b>
 							</div>
 							<div class="wxjia">
 								<span>文 轩 价 ：</span>
-								<em class="price">¥22.80</em>
+								<em class="price">¥{{ book1.price }}</em>
 								<i>（6.5折）</i>
 								<a href="#" target="_blank">（降价通知）</a>
 							</div>
@@ -317,15 +326,15 @@
 						<div class="buymore">
 							<div class="much">
 								<span>购买数量 ：</span>
-								<b class="much-more">
-									<a class="reduce-btn">-</a>
-									<input type="text" value="1" class="buy-much">
-									<a class="add-btn">+</a>
-								</b>件
+								<span class="much-more">
+									<span class="reduce-btn" booksid="1">-</span>
+                                    <span class="num">{{ carts.number }}</span>
+									<span class="add-btn" booksid="1">+</span>
+								</span>件
 							</div>
 
 								<div id="cart">
-									<a target="_blank" style="cursor: pointer;" href="gouwuche.html"></a>
+									<a target="_blank" style="cursor: pointer;" href="{% url 'mymission:cart' %}" class="addcart"></a>
 								</div>
 
 
@@ -344,23 +353,23 @@
 						</div>
 					</div>
 					<!--购物显示界面 -->
-					<div class="suc-wrp">
-						<div class="suc">
-							<div class="suc-title">
-								<em>提示</em>
-								<b class="guanbi">X</b>
-							</div>
-							<div class="suc-content">
-								<div class="cg">商品已成功添加到购物车！</div>
-								<p>购物车共有<b class="jisuan">2</b>件商品，合计：<b class="jisuan2">￥52.50</b></p>
-							</div>
-							<div class="suc-btn">
-								<button id="cart" style="border-radius:5px ;"><a href="{% url 'mymission:cart' %}" target="_blank" class="addToCart">去购物车并结算 </a> </button>
-								<button class="buy-min">继续购物&gt;</button>
-
-							</div>
-						</div>
-					</div>
+{#					<div class="suc-wrp">#}
+{#						<div class="suc">#}
+{#							<div class="suc-title">#}
+{#								<em>提示</em>#}
+{#								<b class="guanbi">X</b>#}
+{#							</div>#}
+{#							<div class="suc-content">#}
+{#								<div class="cg">商品已成功添加到购物车！</div>#}
+{#								<p>购物车共有<b class="jisuan">2</b>件商品，合计：<b class="jisuan2">￥52.50</b></p>#}
+{#							</div>#}
+{#							<div class="suc-btn">#}
+{#								<button id="cart" style="border-radius:5px ;"><a href="{% url 'mymission:cart' %}" target="_blank" class="addToCart">去购物车并结算 </a> </button>#}
+{#								<button class="buy-min">继续购物&gt;</button>#}
+{##}
+{#							</div>#}
+{#						</div>#}
+{#					</div>#}
 
 
 				</div>

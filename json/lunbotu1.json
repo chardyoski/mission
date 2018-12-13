@@ -1,28 +1,44 @@
 [
 	{
 		"id":101,
-		"img":"/images/banner1.jpg",
-		"img2":"static/index/images/b-s1.jpg"
+		"productid":"001",
+		"productimg":"/static/index/images/small.jpg",
+		"productname":"small",
+		"price":"¥22.80",
+		"marketprice": "¥35"
+
 	},
 	{
 		"id":102,
-		"img":"/images/banner2.jpg",
-		"img2":"/images/b-s2.jpg"
+		"productid":"002",
+		"productimg":"/static/index/images/small1.jpg",
+		"productname":"small1",
+		"price":"¥9.9",
+		"marketprice": "¥28.0"
 	},
 	{
 		"id":103,
-		"img":"/images/banner3.jpg",
-		"img2":"/images/b-s3.jpg"
+		"productid":"003",
+		"productimg":"/static/index/images/small2.jpg",
+		"productname":"small2",
+		"price":"¥9.9",
+		"marketprice": "¥28.0"
 	},
 	{
 		"id":104,
-		"img":"/images/banner4.jpg",
-		"img2":"/images/b-s4.jpg"
+		"productid":"004",
+		"productimg":"/static/index/images/small3.jpg",
+		"productname":"small3",
+		"price":"¥9.9",
+		"marketprice": "¥28.0"
 	},
 	{
 		"id":105,
-		"img":"/images/banner5.jpg",
-		"img2":"/images/b-s5.jpg"
+		"productid":"/static/index/images/small4.jpg",
+		"productimg":"small4",
+		"productname":"small4",
+		"price":"¥9.9",
+		"marketprice": "¥28.0"
 	}
 
 

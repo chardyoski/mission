@@ -49,10 +49,19 @@
 				</div>
 				<ul class="he-r">
 					<li>
-						<span>{{ name }}您好，欢迎光临文轩网！</span>
+						<span>您好，欢迎光临文轩网！</span>
 					</li>
 					<li class="login">
-						<a href="{% url 'mymission:login' %}" target="_blank" id="col">【登录】</a>
+{#						<a href="{% url 'mymission:login' %}" target="_blank" id="col">【登录】</a>#}
+
+                           <a href="{% url 'mymission:login' %}">
+                        {{ name | default:'登录' }}
+                        </a>
+                        {% if name %}
+
+                    <a href="{% url 'mymission:logout' %}"> 退出登录 </a>
+
+                         {% endif %}
 						<a href="{% url 'mymission:register' %}" target="_blank" id="kiu">【免费注册】</a>
 					</li>
 					<li class="list1">
@@ -462,8 +471,12 @@
 					<div class="pop-book1">
 						<ul>
 							<li>
-								<a href="{% url 'mymission:small' %}" target="_blank">
-									<img src="{%static 'index/images/small.jpg'%}">
+								<a href="{% url 'mymission:small' %}" >
+
+                                        <img src="{{ book1.productimg }}" alt="">
+
+
+{#                                    <img src="{{ book1.productimg }}">#}
 {#									<span>超值9.9</span>#}
 									<strong>￥22.8</strong>
 {#									<i>￥22.8</i>#}
@@ -565,7 +578,20 @@
 					<span class="mony1">文轩聚集</span>
 					<b class="tiper1">倾情推荐时下最热门图书,这里做了跳转界面</b>
 				</div>
-				<ul class="pic-pop1">
+
+                <ul class="pic-pop1">
+                   {% for book in books %}
+                    <li>
+                        <a href="#">
+                        <img src="{{ book.productimg }}" alt="">
+                    <b>￥{{ book.price }}</b>
+                    <i>￥{{ book.marketprice }}</i>
+                        </a>
+                    </li>
+
+                   {% endfor %}
+
+
 {#					<li>#}
 {#						<a href="small.html?id=" +id="" target="_blank">#}
 {#							<img src="{%static 'index/images/ss1.jpg'%}" title="双峰 神秘史 参与式档案小说 媲美畅销书 S 忒修斯之船  多人叙事+300余张彩色内文图辅助侦查未解悬案 外国文学小说">#}
@@ -1806,6 +1832,14 @@
 			</div>
 		</div>
 	
-	
+	<div>
+        {% for wheel in wheels %}
+         <li>
+             <img src="/{{ wheel.img }}" alt="">
+         </li>
+        {% endfor %}
+        
+       
+    </div>
 	</body>
 </html>

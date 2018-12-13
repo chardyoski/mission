@@ -5,7 +5,7 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 
 # Create your views here.
-from app.models import Wheel, User
+from app.models import Wheel, User, Books, Cart
 
 
 def index(request):
@@ -15,13 +15,20 @@ def index(request):
     #     contents = qf.read()
     #     contents = eval(contents)
     # for dice in contents:
-    #     lunbo = Wheel()
-    #     lunbo.img = dice['img']
-    #     lunbo.img2 = dice['img2']
+    #     lunbo = Books()
+    #     # lunbo.productid = dice['productid']
+    #     lunbo.productimg = dice['productimg']
+    #     lunbo.productname = dice['productname']
+    #     lunbo.price = dice['price']
+    #     lunbo.marketprice = dice['marketprice']
     #     lunbo.save()
     token = request.session.get('token')
-
-    data = {}
+    wheels = Wheel.objects.all()
+    books=Books.objects.all()
+    book1=Books.objects.first()
+    data = {'wheels':wheels,
+            'books':books,
+            'book1':book1}
 
     if token:
         user = User.objects.get(token=token)
@@ -52,18 +59,36 @@ def denglu(request):
                 request.session['token'] = user.token
                 return redirect('mymission:index')
             else:
-                return render(request, 'denglu.html', context={'p_error': 'password error'})
+                return render(request, 'denglu.html', context={'p_error': 'username/password error'})
         except:
-                return render(request, 'denglu.html', context={'u_error': 'username error'})
+                return render(request, 'denglu.html', context={'u_error': 'username/password error'})
 
 
 
 
 def small(request):
-    return render(request,'small.html')
+    token = request.session.get('token')
+    # carts = []
+    book1 = Books.objects.first()
+    # productid = request.GET.get('productid')
+    # print(productid)
+
+
+
+    if token:
+        user = User.objects.get(token=token)
+        carts = Cart.objects.filter(user=user).first()
+        name = user.name
+
+    data = {'book1': book1,
+            'carts': carts,
+            'name':name,
+            }
+    return render(request,'small.html',context=data)
 
 
 def small1(request):
+
     return render(request,'small1.html')
 
 
@@ -110,14 +135,27 @@ def zhuce(request):
 
 
 def gouwuche(request):
+    # token = request.session.get('token')
+    #
+    # if token:
+    #     data = {}
+    #     user = User.objects.get(token=token)
+    #     data['name'] = user.name
+    #     # data['img'] = user.img
+    #
+    # return render(request,'gouwuche.html', context=data)
     token = request.session.get('token')
-    data = {}
     if token:
         user = User.objects.get(token=token)
-        data['name'] = user.name
-        # data['img'] = user.img
+        carts = Cart.objects.filter(user=user).exclude(number=0).first()
 
-    return render(request,'gouwuche.html', context=data)
+        data = {
+            'carts': carts
+        }
+
+        return render(request, 'gouwuche.html', context=data)
+    else:
+        return redirect('mymission:login')
 
 
 # def mine(request):
@@ -131,3 +169,58 @@ def checkname(request):
         return JsonResponse({'msg':'用户名不可以使用','status':0})
     else:
         return JsonResponse({'msg':'用户名可以使用','status':1})
+
+
+def logout(request):
+    request.session.flush()
+    return redirect('mymission:index')
+
+
+def addcart(request):
+    booksid=request.GET.get('booksid')
+    token=request.session.get('token')
+    print(booksid)
+    data={}
+    if token:
+        user=User.objects.get(token=token)
+        books = Books.objects.get(pk=booksid)
+        carts=Cart.objects.filter(user=user).filter(books=books)
+        if carts.exists():
+
+            cart=carts.first()
+            cart.number=cart.number+1
+            cart.save()
+
+        else:
+            cart=Cart()
+            cart.user=user
+            cart.books=books
+            cart.number=1
+            cart.save()
+        return JsonResponse({'msg':'{},添加购物车成功'.format(books.productname),'number':cart.number,'status':1})
+
+    else:
+        data['msg']="please login!"
+        data['status']=-1
+        return JsonResponse(data)
+
+
+def subcart(request):
+    token = request.session.get('token')
+    booksid = request.GET.get('booksid')
+
+    user = User.objects.get(token=token)
+    books = Books.objects.get(pk=booksid)
+
+    # 找到对应的购物车 商品信息
+    cart = Cart.objects.filter(user=user).filter(books=books).first()
+    cart.number = cart.number - 1
+    cart.save()
+
+    data = {
+        'msg': '购物车删减成功',
+        'status': 1,
+        'number': cart.number
+    }
+
+    return JsonResponse(data)
